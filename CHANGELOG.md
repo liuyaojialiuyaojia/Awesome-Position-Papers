@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-23 — Website
+
+- Added `scripts/build_site.py`, which generates `docs/index.html` and `docs/papers.json` with 638 public papers, 40 essential reads, and 10 debates covering 23 paper entries. Excluded rows stay out of the site.
+- Added local search, topic/venue/year filter chips, an Essential only toggle, newest/oldest year sorting, 40-card incremental rendering, expandable abstracts, essential-reading notes, and side-by-side debate positions. Citation sorting appears automatically when citation data exists; it is hidden while all counts are empty.
+- Added self-contained responsive CSS/JavaScript, persistent light/dark themes, labelled controls, keyboard-focus styles, a skip link, live result counts, and single-column mobile cards. The site has no build-time or runtime dependencies, external assets, or trackers.
+- Validated Python syntax, repeat generation, 638 unique public ids, complete paper text and URLs, curated id references, unique HTML ids, and conditional citation-sort generation.
+- Known problems: a real Chromium session could not start in this minimal environment because GLib, NSS, X11, and other system libraries are absent. Browser interactions and visual rendering therefore remain unverified; static and data checks passed. GitHub Pages still needs to be enabled by the owner for public hosting.
+
 ## 2026-11-23 — README redesign
 
 - Rewrote `scripts/build_readme.py` to generate concise English and Chinese reading guides from `papers.csv`, `stats.json`, `essentials.yaml`, and `debates.yaml`; regenerated both READMEs at 204 lines each.
