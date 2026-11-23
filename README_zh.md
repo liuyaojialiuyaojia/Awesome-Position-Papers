@@ -196,7 +196,7 @@ AI 论文不只有「怎么做」，还有「该不该」。这里把散落的�
 ```bibtex
 @misc{awesome_position_papers,
   title        = {Awesome Position Papers: A Data-Backed Map of AI/ML Position Papers},
-  author       = {Awesome Position Papers contributors},
+  author       = {Zhichao Liu},
   year         = {2026},
   howpublished = {\url{https://github.com/liuyaojialiuyaojia/Awesome-Position-Papers}},
   note         = {638 papers, CC BY 4.0}

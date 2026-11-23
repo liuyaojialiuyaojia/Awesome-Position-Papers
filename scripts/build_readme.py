@@ -146,7 +146,7 @@ def bibtex(papers: int) -> str:
     return f"""```bibtex
 @misc{{awesome_position_papers,
   title        = {{Awesome Position Papers: A Data-Backed Map of AI/ML Position Papers}},
-  author       = {{Awesome Position Papers contributors}},
+  author       = {{Zhichao Liu}},
   year         = {{2026}},
   howpublished = {{\\url{{https://github.com/liuyaojialiuyaojia/Awesome-Position-Papers}}}},
   note         = {{{papers} papers, CC BY 4.0}}

@@ -196,7 +196,7 @@ Dataset and text: **CC BY 4.0** ([license](LICENSE)). Papers remain their author
 ```bibtex
 @misc{awesome_position_papers,
   title        = {Awesome Position Papers: A Data-Backed Map of AI/ML Position Papers},
-  author       = {Awesome Position Papers contributors},
+  author       = {Zhichao Liu},
   year         = {2026},
   howpublished = {\url{https://github.com/liuyaojialiuyaojia/Awesome-Position-Papers}},
   note         = {638 papers, CC BY 4.0}
