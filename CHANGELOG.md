@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23 — Debate map
+
+- Added `data/curated/debates.yaml` with 10 concrete debates and 23 unique public papers. Each debate has one question, one line of context, and two or three concise sides grounded in the papers’ abstracts.
+- Checked 25 candidate abstracts and retained 23; dropped the autonomous-science pair because its claims addressed different time horizons rather than giving directly different answers. Seven debates contain two papers and three contain three.
+- Validated debate structure, unique debate and paper ids, public CSV membership, required fields, and the 10–15 debate range.
+- Known problems: this is an abstract-level editorial map, not a full-text review or evidence that authors directly responded to one another. The README and website do not consume the file yet; those are separate backlog items.
+
 ## 2026-11-23 — Essential reads
 
 - Reviewed the curated stance lines for 638 public papers, shortlisted 82 candidates, read their abstracts, and selected 40 essential reads. Added `data/curated/essentials.yaml` with a four-part rubric and one concise rationale per paper.

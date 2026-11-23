@@ -1,0 +1,101 @@
+rubric:
+  scope: "Ten debates across 23 papers; every included abstract was checked for this map."
+  include: "A concrete question with at least two genuinely different answers, not merely papers on a shared theme."
+  evidence: "Sides summarize abstract-level claims; they do not imply that the authors directly responded to one another."
+
+debates:
+  - id: llm-assisted-peer-review
+    question: "Should ML conferences allow LLM assistance in peer review now?"
+    context: "Both papers retain a role for human judgment but disagree on whether current capabilities justify general admission."
+    papers:
+      - id: "x0a5e7b67b5dc"
+        side: "Permit it: models can reproduce many human-identified strengths and find useful weaknesses, provided humans remain involved throughout."
+      - id: "x896bf7ce3f25"
+        side: "Wait: current systems are too unreliable, insufficiently tested, and exposed to security and ethical problems for general inclusion."
+
+  - id: evaluation-beyond-static-benchmarks
+    question: "What should replace static, autonomous benchmark evaluation?"
+    context: "Both reject fixed test-set averages as sufficient, but optimize for different objects: latent model ability or human–AI team performance."
+    papers:
+      - id: "2306.10512"
+        side: "Use adaptive psychometrics: estimate item properties and latent abilities with model-specific tests."
+      - id: "x1dabaf6b9b9f"
+        side: "Evaluate human–AI teams: measuring complementary performance would steer development away from autonomous replacement."
+
+  - id: agi-as-research-goal
+    question: "Should AGI organize the field’s research goals and measures of progress?"
+    context: "One paper treats AGI as a useful progress axis; the other argues that the concept distorts goal setting."
+    papers:
+      - id: "2311.02462"
+        side: "Yes: levels of performance, generality, and autonomy provide a common language for progress, risk, and deployment."
+      - id: "2502.03689"
+        side: "No: replace the north-star framing with specific, plural goals and broader disciplinary and community inclusion."
+
+  - id: foundation-model-access
+    question: "How openly should foundation models be distributed?"
+    context: "The disagreement concerns not only benefits and risks, but whether unrestricted weights or an owner-controlled middle regime is the right default."
+    papers:
+      - id: "2404.17047"
+        side: "Responsibly open-source models in the near and medium term, with regulation and technical mitigations that preserve openness."
+      - id: "2403.07918"
+        side: "Judge openness by evidence: assess marginal misuse risk relative to existing technologies alongside innovation, competition, power, and transparency."
+      - id: "x8e6a2bd7c1a2"
+        side: "Develop a middle regime: locally executable open weights should remain monetizable and subject to enforceable owner constraints."
+
+  - id: alignment-with-conflicting-values
+    question: "How should alignment handle conflicting human values?"
+    context: "Both reject a single uncontested preference signal, but one emphasizes collective choice and the other preserving diversity."
+    papers:
+      - id: "2404.10271"
+        side: "Aggregate divergent feedback through social-choice mechanisms for collective decisions about model behavior."
+      - id: "xc7e724b27964"
+        side: "Preserve pluralism through spectra of reasonable answers, steerability, or calibration to a population’s value distribution."
+
+  - id: uncertain-ai-welfare
+    question: "Should uncertainty about AI consciousness justify welfare protections?"
+    context: "The papers disagree over both moral standing and whether unvalidated welfare claims should influence development or governance."
+    papers:
+      - id: "x2db3e466c970"
+        side: "Yes: limit or periodically reset memory to reduce possible silent suffering without first proving consciousness."
+      - id: "2601.21016"
+        side: "No: under Biological Idealism, AI only mimics consciousness, so human conscious life takes priority over machine rights."
+      - id: "x8eace02f6580"
+        side: "No release gates or oversight exemptions: restrictions require externally verifiable harms, not untestable welfare scores."
+
+  - id: anthropomorphic-language
+    question: "Is anthropomorphic language a useful signal or a harmful frame for AI research?"
+    context: "One paper treats such language as a diagnostic starting point; the other argues that it misdirects research on intermediate tokens."
+    papers:
+      - id: "xc81d47317505"
+        side: "Use it constructively: anthropomorphic language shows where terminology and conceptual clarity need work."
+      - id: "2504.09762"
+        side: "Avoid it for intermediate tokens: calling tokens reasoning traces or thoughts mischaracterizes models and encourages questionable research."
+
+  - id: social-simulation-claims
+    question: "What claims are LLM social simulations ready to support?"
+    context: "All three see research value, but disagree on whether current use should emphasize exploration, bounded claims, or consolidation."
+    papers:
+      - id: "2504.02234"
+        side: "Use them now for pilot and exploratory studies while improving prompting, fine-tuning, conceptual models, and iterative evaluation."
+      - id: "xb5ca8927ed24"
+        side: "Limit claims to collective qualitative patterns when behavioral variance is inadequate, and validate both means and heterogeneity."
+      - id: "xc59d1e0c2bba"
+        side: "Pause expansion toward high-stakes use: shared benchmarks, open data, and reproducible validation must come first."
+
+  - id: model-collapse-threat
+    question: "How serious is the threat of model collapse from synthetic training data?"
+    context: "The papers agree the phenomenon matters but dispute whether catastrophic narratives obscure realistic risks or neglect marginalized communities."
+    papers:
+      - id: "2503.03150"
+        side: "Do not treat collapse as an inevitable catastrophe: several prominent scenarios depend on unrealistic, avoidable conditions."
+      - id: "2605.04127"
+        side: "Treat it as a democratization threat: tail-data degradation and lower training efficiency disproportionately harm low-resource communities."
+
+  - id: efficiency-and-rebound
+    question: "Do efficiency gains reliably reduce AI’s total environmental footprint?"
+    context: "Reducing training resources can cut measured energy use, but cheaper computation can also induce more demand and more intensive execution."
+    papers:
+      - id: "2602.19789"
+        side: "Yes, with data frugality: coreset selection can substantially reduce training energy with little accuracy loss while also mitigating bias."
+      - id: "xfa7efb61b6d2"
+        side: "Not necessarily: rebound effects can increase total energy use, so efficiency claims require quantitative analysis of induced demand and behavior."
