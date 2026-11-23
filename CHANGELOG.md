@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23 — Compress taxonomy
+
+- Compressed 15 topics to 10 and removed the `Other` bucket. Added an explicit legacy mapping and paper-level split overrides in `data/taxonomy.yaml`; `scripts/compress_taxonomy.py` updated 443 of 647 curated rows and is idempotent.
+- Merged data with compute, theory with language modelling and reasoning, and society with fairness and human-AI interaction. Six former `Other` rows were assigned from their curated stance lines: four to Research & open science, one to Evaluation & benchmarks, and one excluded row to Multimodal & generative media.
+- Rebuilt the CSV, statistics, both charts, and both READMEs. The 638 public papers now fall into: Models, reasoning & theory 107; People & society 88; Evaluation & benchmarks 88; Data & compute 77; Safety & alignment 62; Agents & autonomy 54; Research & open science 48; Governance & policy 47; AI for science 42; Multimodal & generative media 25.
+- Known problems: broader topics trade some granularity for scanability. Their automatic fallback keyword lists were merged deterministically, but future uncurated papers may still need manual topic review.
+
 ## 2026-11-23 — Filter candidates
 
 - Added `scripts/filter_candidates.py` and `data/filter_candidates.jsonl`; heuristic checks flagged 24 of 647 rows: 14 near-duplicates, 9 weak position signals, and 1 withdrawal mention.

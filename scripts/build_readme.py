@@ -23,15 +23,10 @@ LICENSE_BADGE = ("![license: CC BY 4.0](https://img.shields.io/badge/license-"
 # Xiaohongshu-ish section marks for the Chinese README.
 ZH_EMOJI = {
     "Evaluation & benchmarks": "📏", "Agents & autonomy": "🤖",
-    "Safety & alignment": "🛟", "Governance, regulation & policy": "⚖️",
-    "Scientific discovery & AI for science": "🔬",
-    "Open science, publishing & research culture": "📚",
-    "Data, provenance & ownership": "🗂️",
-    "Efficiency, scaling & sustainability": "⚡", "Foundations & theory": "🧮",
-    "Society, labor & economy": "🏙️", "Fairness, bias & pluralism": "🌈",
-    "Human-AI interaction & usability": "🙋",
-    "Multimodal, vision & generative media": "🎨",
-    "Language models & reasoning": "🧠", "Other & cross-cutting": "🧩",
+    "Safety & alignment": "🛟", "Governance & policy": "⚖️",
+    "AI for science": "🔬", "Research & open science": "📚",
+    "Data & compute": "🗂️", "Models, reasoning & theory": "🧠",
+    "People & society": "🙋", "Multimodal & generative media": "🎨",
 }
 
 RERUN = """python -m venv .venv && .venv/bin/pip install -r requirements.txt
@@ -41,6 +36,7 @@ RERUN = """python -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/collect_neurips.py --year 2025
 .venv/bin/python scripts/collect_neurips.py --year 2026
 .venv/bin/python scripts/collect_arxiv.py
+.venv/bin/python scripts/compress_taxonomy.py
 .venv/bin/python scripts/build_dataset.py
 .venv/bin/python scripts/stats.py
 .venv/bin/python scripts/build_readme.py"""
@@ -256,6 +252,7 @@ between requests, exponential back-off on `429`, raw responses cached under
 | `scripts/link_arxiv.py` | resolves arXiv ids for venue papers the title scan missed |
 | `scripts/build_dataset.py` | merge + dedupe + curated stance/topic overrides + confirmed exclusions → `data/papers.csv` |
 | `scripts/filter_candidates.py` | flags possible duplicates, withdrawals, short abstracts, and non-position papers for review |
+| `scripts/compress_taxonomy.py` | applies the explicit legacy-topic mapping to curated rows |
 | `scripts/tag_topics.py` | automatic topic and stance fallbacks for papers without curated rows |
 | `scripts/stats.py` | `data/stats.json` and the two charts |
 | `scripts/stance_report.py` | stance-quality counts and before/after pairs for `REPORT.md` |

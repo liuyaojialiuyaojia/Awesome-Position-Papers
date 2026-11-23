@@ -311,7 +311,7 @@ def classify(text_blob: str, native_topic: str, taxonomy: dict,
     Generic LLM vocabulary has the lowest priority, twice over: a
     `generic_keywords` hit only counts when it is in the title, and it is
     subtracted from the `catch_all` topic before that topic is allowed to win.
-    So "Language models & reasoning" takes a paper only on the strength of
+    So "Models, reasoning & theory" takes a paper only on the strength of
     words that actually describe its subject (reasoning, prompting, tokens),
     never merely because the title says "LLM". Ties go to the earlier topic in
     data/taxonomy.yaml.

@@ -16,11 +16,32 @@
 # specific topic to win, so generic vocabulary cannot quietly swallow a paper
 # that is really about agents, safety, evaluation, society, HCI or fairness.
 
-version: 1
-default_topic: other
+version: 2
+default_topic: models-reasoning
 title_boost: 3
 generic_title_boost: 2
 native_boost: 4
+
+legacy_topic_map:
+  Evaluation & benchmarks: Evaluation & benchmarks
+  Agents & autonomy: Agents & autonomy
+  Safety & alignment: Safety & alignment
+  Governance, regulation & policy: Governance & policy
+  Scientific discovery & AI for science: AI for science
+  Open science, publishing & research culture: Research & open science
+  Data, provenance & ownership: Data & compute
+  Efficiency, scaling & sustainability: Data & compute
+  Foundations & theory: Models, reasoning & theory
+  Society, labor & economy: People & society
+  Fairness, bias & pluralism: People & society
+  Human-AI interaction & usability: People & society
+  Multimodal, vision & generative media: Multimodal & generative media
+  Language models & reasoning: Models, reasoning & theory
+  Other & cross-cutting: Research & open science
+
+paper_topic_overrides:
+  2604.21169: Evaluation & benchmarks
+  2405.18236: Multimodal & generative media
 
 topics:
 
@@ -122,8 +143,8 @@ topics:
       - trustworth
 
   governance-policy:
-    label: "Governance, regulation & policy"
-    label_zh: "治理、监管与政策"
+    label: "Governance & policy"
+    label_zh: "治理与政策"
     description: "Law, regulation, standards, institutions and public policy for AI/ML."
     keywords:
       - regulation
@@ -161,8 +182,8 @@ topics:
       - fairne
 
   science-discovery:
-    label: "Scientific discovery & AI for science"
-    label_zh: "科学发现与 AI for Science"
+    label: "AI for science"
+    label_zh: "AI for Science"
     description: "ML as a tool for science: foundation models for molecules, proteins, physics, climate, and the epistemics of that shift."
     keywords:
       - scientific discovery
@@ -200,9 +221,9 @@ topics:
       - neuro
 
   open-research:
-    label: "Open science, publishing & research culture"
-    label_zh: "开放科学与科研生态"
-    description: "Peer review, citation, open access, code and data release, research incentives, who gets to do ML."
+    label: "Research & open science"
+    label_zh: "科研实践与开放科学"
+    description: "Research goals and norms, peer review, publishing, open access, research incentives, and who gets to do ML."
     keywords:
       - peer review
       - reviewing
@@ -236,10 +257,10 @@ topics:
       - open science
       - peer review
 
-  data:
-    label: "Data, provenance & ownership"
-    label_zh: "数据、来源与所有权"
-    description: "Training data: sourcing, consent, licensing, attribution, curation, diversity, leakage, web-scale corpora."
+  data-compute:
+    label: "Data & compute"
+    label_zh: "数据与算力"
+    description: "Training data, provenance and ownership, plus the compute, efficiency and environmental cost of AI."
     keywords:
       - training data
       - dataset
@@ -269,15 +290,6 @@ topics:
       - deduplication
       - creator
       - compensation
-    native:
-      - privacy
-      - data
-
-  efficiency-scaling:
-    label: "Efficiency, scaling & sustainability"
-    label_zh: "效率、扩展与可持续"
-    description: "Compute and energy: scaling laws, environmental cost, hardware, inference budget, who can afford to train."
-    keywords:
       - scaling law
       - scale up
       - compute cost
@@ -303,14 +315,17 @@ topics:
       - frugal
       - sustainability
     native:
+      - privacy
+      - data
       - efficiency
       - scalability
       - systems
 
-  theory:
-    label: "Foundations & theory"
-    label_zh: "基础理论与方法"
-    description: "Formal guarantees, learnability, complexity, causality, decision theory and the mathematical identity of the field."
+  models-reasoning:
+    label: "Models, reasoning & theory"
+    label_zh: "模型、推理与理论"
+    description: "Model behaviour and conceptual foundations: reasoning, retrieval, learning theory, causality, and formal guarantees."
+    catch_all: true
     keywords:
       - theory
       - theoretical
@@ -341,169 +356,6 @@ topics:
       - algebraic
       - topology
       - topological
-    native:
-      - theory
-      - causality
-      - optimization
-      - game
-
-  society-labor:
-    label: "Society, labor & economy"
-    label_zh: "社会、劳动与经济"
-    description: "AI's externalities on people and markets: jobs, inequality, labour, misinformation, adoption and economic power."
-    keywords:
-      - labour
-      - labor
-      - jobs
-      - employment
-      - work
-      - worker
-      - workforce
-      - unemployment
-      - economy
-      - economic
-      - market
-      - inequality
-      - inequality gap
-      - global south
-      - developing countr
-      - digital divide
-      - access gap
-      - misinformation
-      - disinformation
-      - propaganda
-      - polariz
-      - public opinion
-      - adoption
-      - industry concentration
-      - centralization of power
-      - democratiz
-      - livelihood
-      - gross domestic
-      - gdp
-    native:
-      - social
-      - economic
-      - labour
-
-  ethics-fairness:
-    label: "Fairness, bias & pluralism"
-    label_zh: "公平、偏见与多元价值"
-    description: "Discrimination, harms to groups, representation, value pluralism and whose preferences count."
-    keywords:
-      - fairness
-      - fair
-      - bias
-      - biased
-      - discriminat
-      - stereotype
-      - protected class
-      - disparate
-      - racist
-      - sexism
-      - harmful to
-      - marginaliz
-      - underrepresent
-      - bias audit
-      - pluralis
-      - pluralistic
-      - value conflict
-      - cultural
-      - cross-cultural
-      - language diversity
-      - low-resource language
-      - justice
-      - ethics
-      - ethical
-      - moral
-      - human rights
-      - dignity
-      - autonomy of persons
-    native:
-      - fairness
-      - diversity
-      - ethics
-      - inclus
-
-  human-ai-interaction:
-    label: "Human-AI interaction & usability"
-    label_zh: "人机交互与可用性"
-    description: "Interfaces, trust, explainability for people, augmentation vs automation, and the human side of deployment."
-    keywords:
-      - human-computer interaction
-      - human-ai
-      - human ai
-      - user interface
-      - usability
-      - user experience
-      - ux
-      - interact with
-      - explanation
-      - explainab
-      - interpretability for
-      - transparency to users
-      - trust
-      - calibration of trust
-      - mental model
-      - collaboration
-      - copilot
-      - assistive
-      - augmentation
-      - augment
-      - human-centered
-      - human centered
-      - participation
-      - stakeholder
-      - worker experience
-      - prompting by users
-      - overreliance
-      - automation bias
-    native:
-      - human-computer
-      - interpretab
-      - privacy
-
-  multimodal-perception:
-    label: "Multimodal, vision & generative media"
-    label_zh: "多模态、视觉与生成媒体"
-    description: "Images, video, audio, 3D and generative media, including watermarking and synthetic-content detection."
-    keywords:
-      - vision
-      - visual
-      - image
-      - video
-      - camera
-      - multimodal
-      - multi-modal
-      - cross-modal
-      - text-to-image
-      - diffusion model
-      - generative model
-      - synthetic media
-      - deepfake
-      - watermark
-      - photorealistic
-      - graphics
-      - nerf
-      - 3d
-      - speech
-      - audio
-      - music
-      - perception
-      - segmentation
-      - detection model
-    native:
-      - computer vision
-      - generative
-      - speech
-      - vision
-
-  language-modelling:
-    label: "Language models & reasoning"
-    label_zh: "语言模型与推理"
-    description: "LLM behaviour itself: in-context learning, chain-of-thought, reasoning, planning, retrieval, memory, tokenisation."
-    catch_all: true
-    keywords:
       - in-context
       - chain of thought
       - reasoning
@@ -535,17 +387,145 @@ topics:
       - transformer
       - natural language processing
     native:
+      - theory
+      - causality
+      - optimization
+      - game
       - reasoning
 
-  other:
-    label: "Other & cross-cutting"
-    label_zh: "其他与交叉议题"
-    description: "Positions that argue about the field itself, or span so many areas that no single tag fits."
+  people-society:
+    label: "People & society"
+    label_zh: "人与社会"
+    description: "Human-AI interaction, fairness and pluralism, and AI's effects on labor, markets and public life."
     keywords:
-      - position paper
-      - we argue
-      - research agenda
-      - future of machine learning
-      - field
-      - discipline
-    native: []
+      - labour
+      - labor
+      - jobs
+      - employment
+      - work
+      - worker
+      - workforce
+      - unemployment
+      - economy
+      - economic
+      - market
+      - inequality
+      - inequality gap
+      - global south
+      - developing countr
+      - digital divide
+      - access gap
+      - misinformation
+      - disinformation
+      - propaganda
+      - polariz
+      - public opinion
+      - adoption
+      - industry concentration
+      - centralization of power
+      - democratiz
+      - livelihood
+      - gross domestic
+      - gdp
+      - fairness
+      - fair
+      - bias
+      - biased
+      - discriminat
+      - stereotype
+      - protected class
+      - disparate
+      - racist
+      - sexism
+      - harmful to
+      - marginaliz
+      - underrepresent
+      - bias audit
+      - pluralis
+      - pluralistic
+      - value conflict
+      - cultural
+      - cross-cultural
+      - language diversity
+      - low-resource language
+      - justice
+      - ethics
+      - ethical
+      - moral
+      - human rights
+      - dignity
+      - autonomy of persons
+      - human-computer interaction
+      - human-ai
+      - human ai
+      - user interface
+      - usability
+      - user experience
+      - ux
+      - interact with
+      - explanation
+      - explainab
+      - interpretability for
+      - transparency to users
+      - trust
+      - calibration of trust
+      - mental model
+      - collaboration
+      - copilot
+      - assistive
+      - augmentation
+      - augment
+      - human-centered
+      - human centered
+      - participation
+      - stakeholder
+      - worker experience
+      - prompting by users
+      - overreliance
+      - automation bias
+    native:
+      - social
+      - economic
+      - labour
+      - fairness
+      - diversity
+      - ethics
+      - inclus
+      - human-computer
+      - interpretab
+      - privacy
+
+  multimodal-perception:
+    label: "Multimodal & generative media"
+    label_zh: "多模态与生成媒体"
+    description: "Images, video, audio, 3D and generative media, including watermarking and synthetic-content detection."
+    keywords:
+      - vision
+      - visual
+      - image
+      - video
+      - camera
+      - multimodal
+      - multi-modal
+      - cross-modal
+      - text-to-image
+      - diffusion model
+      - generative model
+      - synthetic media
+      - deepfake
+      - watermark
+      - photorealistic
+      - graphics
+      - nerf
+      - 3d
+      - speech
+      - audio
+      - music
+      - perception
+      - segmentation
+      - detection model
+    native:
+      - computer vision
+      - generative
+      - speech
+      - vision

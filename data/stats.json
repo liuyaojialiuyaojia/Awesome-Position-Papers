@@ -1,27 +1,22 @@
 {
   "generated_at": "2026-11-23",
   "papers": 638,
-  "topics": 15,
+  "topics": 10,
   "years": {
     "min": 2023,
     "max": 2026
   },
   "per_topic": {
-    "Evaluation & benchmarks": 87,
-    "Foundations & theory": 71,
+    "Models, reasoning & theory": 107,
+    "People & society": 88,
+    "Evaluation & benchmarks": 88,
+    "Data & compute": 77,
     "Safety & alignment": 62,
     "Agents & autonomy": 54,
-    "Data, provenance & ownership": 53,
-    "Governance, regulation & policy": 47,
-    "Human-AI interaction & usability": 45,
-    "Open science, publishing & research culture": 44,
-    "Scientific discovery & AI for science": 42,
-    "Language models & reasoning": 36,
-    "Multimodal, vision & generative media": 25,
-    "Efficiency, scaling & sustainability": 24,
-    "Fairness, bias & pluralism": 24,
-    "Society, labor & economy": 19,
-    "Other & cross-cutting": 5
+    "Research & open science": 48,
+    "Governance & policy": 47,
+    "AI for science": 42,
+    "Multimodal & generative media": 25
   },
   "per_venue": {
     "ICML": 365,
@@ -45,80 +40,56 @@
     "neurips2025_position_track": 40
   },
   "per_topic_year": {
+    "AI for science": {
+      "2024": 5,
+      "2025": 10,
+      "2026": 27
+    },
     "Agents & autonomy": {
       "2024": 7,
       "2025": 13,
       "2026": 34
     },
-    "Data, provenance & ownership": {
-      "2024": 10,
-      "2025": 17,
-      "2026": 26
-    },
-    "Efficiency, scaling & sustainability": {
-      "2024": 1,
-      "2025": 4,
-      "2026": 19
+    "Data & compute": {
+      "2024": 11,
+      "2025": 21,
+      "2026": 45
     },
     "Evaluation & benchmarks": {
       "2024": 7,
       "2025": 21,
-      "2026": 59
+      "2026": 60
     },
-    "Fairness, bias & pluralism": {
-      "2024": 3,
-      "2025": 5,
-      "2026": 16
-    },
-    "Foundations & theory": {
-      "2023": 1,
-      "2024": 15,
-      "2025": 14,
-      "2026": 41
-    },
-    "Governance, regulation & policy": {
+    "Governance & policy": {
       "2024": 9,
       "2025": 15,
       "2026": 23
     },
-    "Human-AI interaction & usability": {
-      "2024": 2,
-      "2025": 16,
-      "2026": 27
+    "Models, reasoning & theory": {
+      "2023": 1,
+      "2024": 20,
+      "2025": 21,
+      "2026": 65
     },
-    "Language models & reasoning": {
-      "2024": 5,
-      "2025": 7,
-      "2026": 24
-    },
-    "Multimodal, vision & generative media": {
+    "Multimodal & generative media": {
       "2024": 6,
       "2025": 5,
       "2026": 14
     },
-    "Open science, publishing & research culture": {
+    "People & society": {
       "2024": 6,
-      "2025": 8,
-      "2026": 30
+      "2025": 27,
+      "2026": 55
     },
-    "Other & cross-cutting": {
-      "2025": 3,
-      "2026": 2
+    "Research & open science": {
+      "2024": 6,
+      "2025": 11,
+      "2026": 31
     },
     "Safety & alignment": {
       "2024": 7,
       "2025": 12,
       "2026": 43
-    },
-    "Scientific discovery & AI for science": {
-      "2024": 5,
-      "2025": 10,
-      "2026": 27
-    },
-    "Society, labor & economy": {
-      "2024": 1,
-      "2025": 6,
-      "2026": 12
     }
   },
   "per_venue_year": {
