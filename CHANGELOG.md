@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23 — Essential reads
+
+- Reviewed the curated stance lines for 638 public papers, shortlisted 82 candidates, read their abstracts, and selected 40 essential reads. Added `data/curated/essentials.yaml` with a four-part rubric and one concise rationale per paper.
+- Covered all 10 topics: five Safety & alignment papers, three Multimodal & generative media papers, and four from each other topic. The selection spans 15 papers from 2024, 14 from 2025, and 11 from 2026.
+- Removed redundant theses and retained direct contrasts where both sides were substantive, including social simulation and AI-assisted peer review. Validated every selected id against the shortlist and public CSV rows.
+- Known problems: selection is an abstract-level editorial judgment, not a full-text review; citations were unavailable and played no role. The README and website do not consume the new file yet; those are separate backlog items.
+
 ## 2026-11-23 — Compress taxonomy
 
 - Compressed 15 topics to 10 and removed the `Other` bucket. Added an explicit legacy mapping and paper-level split overrides in `data/taxonomy.yaml`; `scripts/compress_taxonomy.py` updated 443 of 647 curated rows and is idempotent.
