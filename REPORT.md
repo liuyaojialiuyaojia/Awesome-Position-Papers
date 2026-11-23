@@ -174,7 +174,7 @@ data/
   raw/                # intermediate collector outputs (git-ignored)
 assets/
   papers_per_topic.png
-  papers_per_topic_by_year_venue.png
+  papers_per_topic_by_year.png
 scripts/
   common.py           # HTTP cache, CSV I/O, YAML-lite parser
   collect_icml.py

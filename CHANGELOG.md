@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23 — README redesign
+
+- Rewrote `scripts/build_readme.py` to generate concise English and Chinese reading guides from `papers.csv`, `stats.json`, `essentials.yaml`, and `debates.yaml`; regenerated both READMEs at 204 lines each.
+- Replaced the 638-row per-topic tables, source/venue audit tables, long collector documentation, and two-chart overview with four badges, three key numbers, one topic-by-year chart, 40 essential reads grouped across 10 topics, and 10 collapsible debate cards covering 23 papers.
+- Added one full-list website link, three-line build instructions, compact contribution/curation notes, and retained the CC BY 4.0 citation. Validated Python syntax, balanced cards, badge/chart counts, curated CSV ids, and removal of full-list tables.
+- Known problems: `docs/index.html` is the next backlog item, so the website link is pending until that page exists. Selections and debate sides remain abstract-level editorial drafts.
+
 ## 2026-11-23 — Debate map
 
 - Added `data/curated/debates.yaml` with 10 concrete debates and 23 unique public papers. Each debate has one question, one line of context, and two or three concise sides grounded in the papers’ abstracts.

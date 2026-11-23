@@ -2,8 +2,8 @@
 
 Thanks for helping. Three rules cover most of it:
 
-1. **The READMEs are generated.** Never edit the paper tables in `README.md` or
-   `README_zh.md` — change the data and rerun `scripts/build_readme.py`.
+1. **The READMEs are generated.** Never edit `README.md` or `README_zh.md`
+   directly — change the data or generator and rerun `scripts/build_readme.py`.
 2. **Every number must be reproducible.** Anything shown in a README has to come
    from a script in `scripts/` that can be rerun, so new claims need a collector
    or a stats change, not prose.

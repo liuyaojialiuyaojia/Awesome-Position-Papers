@@ -1,8 +1,7 @@
-"""Compute data/stats.json and the two README charts from data/papers.csv.
+"""Compute data/stats.json and the two charts from data/papers.csv.
 
 Charts are deliberately plain: white background, direct value labels, no
-legend noise, topics sorted by size. Chart 2 is a two-panel matrix so the
-topic split is readable both by year and by venue.
+legend noise, topics sorted by size. Chart 2 shows the topic split by year.
 """
 
 from __future__ import annotations
@@ -79,35 +78,24 @@ def _matrix(ax, labels: list[str], cols: list[str], values: np.ndarray,
     return vmax
 
 
-def chart_topic_split(df: pd.DataFrame, out: str) -> None:
+def chart_topic_year(df: pd.DataFrame, out: str) -> None:
     frame = df.copy()
     frame["year"] = pd.to_numeric(frame["year"], errors="coerce")
     frame = frame.dropna(subset=["year"])
     frame["year"] = frame["year"].astype(int)
 
-    order = list(df["topic"].value_counts().index)          # biggest first
+    order = list(df["topic"].value_counts().index)
     years = sorted(frame["year"].unique())
-    venues = [v for v in ["ICML", "NeurIPS", "arXiv-only"] if v in set(frame["venue"])]
-    venues += sorted(set(frame["venue"]) - set(venues))
+    pivot = (frame.groupby(["topic", "year"]).size().unstack("year")
+             .reindex(index=order, columns=years).fillna(0))
+    values = pivot.values.astype(int)
 
-    def grid(col: str, cols: list) -> np.ndarray:
-        pivot = (frame.groupby(["topic", col]).size().unstack(col)
-                 .reindex(index=order, columns=cols).fillna(0))
-        return pivot.values.astype(int)
-
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.6, 0.36 * len(order) + 2.4), dpi=170,
-                                   gridspec_kw={"width_ratios": [len(years), max(len(venues), 3) + 1]})
-    fig.patch.set_facecolor(BG)
-    _matrix(ax1, order, [str(y) for y in years], grid("year", years), "year")
-    _matrix(ax2, order, venues, grid("venue", venues), "venue")
-    for ax in (ax1, ax2):
-        _figure_setup(fig, ax)
-        ax.set_yticklabels([])
-    ax2.set_yticks(range(len(order)), order, fontsize=8.5)
-    ax2.set_yticklabels(order, fontsize=8.5)
-    fig.suptitle("Position papers per topic, by year and by venue",
-                 x=0.012, y=0.995, ha="left", fontsize=12, color=INK)
-    fig.tight_layout(rect=(0, 0, 1, 0.955))
+    fig, ax = plt.subplots(figsize=(7.4, 0.44 * len(order) + 1.8), dpi=170)
+    _figure_setup(fig, ax)
+    _matrix(ax, order, [str(y) for y in years], values, "year")
+    ax.set_title("Position papers per topic, by year", loc="left",
+                 fontsize=12, color=INK, pad=12)
+    fig.tight_layout()
     fig.savefig(out, facecolor=BG)
     plt.close(fig)
 
@@ -124,7 +112,7 @@ def main() -> None:
 
     os.makedirs(C.ASSETS, exist_ok=True)
     chart_topic(df, os.path.join(C.ASSETS, "papers_per_topic.png"))
-    chart_topic_split(df, os.path.join(C.ASSETS, "papers_per_topic_by_year_venue.png"))
+    chart_topic_year(df, os.path.join(C.ASSETS, "papers_per_topic_by_year.png"))
 
     def counts(col: str) -> dict:
         vc = df[col].fillna("").astype(str).replace("", "unspecified").value_counts()
@@ -159,7 +147,7 @@ def main() -> None:
         "per_venue_year": venue_year,
         "per_track_year": track_year,
         "with_arxiv_id": int((df["arxiv_id"].astype(str).str.len() > 0).sum()),
-        "charts": ["assets/papers_per_topic.png", "assets/papers_per_topic_by_year_venue.png"],
+        "charts": ["assets/papers_per_topic.png", "assets/papers_per_topic_by_year.png"],
     }
     C.write_json(stats, os.path.join(C.DATA, "stats.json"))
     print(f"stats: {stats['papers']} papers, {stats['topics']} topics, "
