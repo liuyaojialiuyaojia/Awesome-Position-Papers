@@ -181,13 +181,13 @@ AI 论文不只有「怎么做」，还有「该不该」。这里把散落的�
 
 ## 🔎 查完整论文库
 
-[打开可搜索网站](docs/index.html)，按主题、会议和年份筛选全部 638 篇论文。
+[打开可搜索网站](docs/index.html)，按主题、会议和年份筛选全部 638 篇论文，也可按引用数排序。
 
 ## 🛠️ 怎么构建
 
 - `collect_*.py` 收集公开元数据，`build_dataset.py` 去重，并应用精选主题、立场与排除记录。
-- `stats.py` 计算所有数字和图表，`build_readme.py` 从 CSV 与精选 YAML 生成中英文指南。
-- 依次运行 `.venv/bin/python scripts/build_dataset.py`、`.venv/bin/python scripts/stats.py`、`.venv/bin/python scripts/build_readme.py` 即可重建。
+- `fetch_citations.py` 记录带日期的 OpenAlex 引用数，`stats.py` 计算所有数字和图表，`build_readme.py` 生成中英文指南。
+- 依次重建：`build_dataset.py`、`fetch_citations.py`、`stats.py`、`build_readme.py`、`build_site.py`；均用 `.venv/bin/python scripts/<脚本名>` 运行。
 
 ## 📌 怎么引用
 

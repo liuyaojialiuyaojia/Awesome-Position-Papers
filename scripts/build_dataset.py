@@ -43,6 +43,23 @@ POSITION_MENTION = re.compile(r"position\s*(?:paper)?\s*track|position\s*paper",
 WORKSHOP = re.compile(r"workshop|tutorial|consortium", re.I)
 CURATED = os.path.join(C.DATA, "curated", "stances.jsonl")
 FILTER = os.path.join(C.DATA, "curated", "filter.jsonl")
+CITATIONS = os.path.join(C.DATA, "citations.json")
+
+
+def load_citations() -> dict[str, dict]:
+    if not os.path.exists(CITATIONS):
+        return {}
+    with open(CITATIONS, encoding="utf-8") as fh:
+        snapshot = json.load(fh)
+    if snapshot.get("source") != "OpenAlex" or not snapshot.get("fetched_at"):
+        raise ValueError("invalid citation snapshot")
+    papers = snapshot.get("papers", {})
+    for paper_id, record in papers.items():
+        if not isinstance(record.get("citations"), int) or record["citations"] < 0:
+            raise ValueError(f"invalid citation count for {paper_id}")
+        if not record.get("openalex_id") or record.get("matched_by") not in {"arxiv_doi", "exact_title"}:
+            raise ValueError(f"invalid OpenAlex match for {paper_id}")
+    return papers
 
 
 def load_exclusions() -> dict[str, dict]:
@@ -249,6 +266,12 @@ def merge() -> tuple[list[dict], dict]:
                 keeper["arxiv_id"] = row["arxiv_id"]
     stats["excluded"] = len(exclusions)
 
+    citations = load_citations()
+    for row in rows:
+        record = citations.get(row["id"])
+        row["citations"] = record["citations"] if record else ""
+    stats["citations"] = sum(row["id"] in citations for row in rows)
+
     rows.sort(key=lambda r: (-r["year"], r["venue"], r["title"].lower()))
     return rows, stats
 
@@ -262,7 +285,8 @@ def main() -> None:
     C.write_csv(rows, args.out)
     print(f"  wrote {len(rows)} rows -> {os.path.relpath(args.out, C.REPO)}")
     print(f"    curated stance/topic overrides: {stats['curated']}; automatic drafts retained: "
-          f"{len(rows) - stats['curated']}; excluded from public views: {stats['excluded']}")
+          f"{len(rows) - stats['curated']}; excluded from public views: {stats['excluded']}; "
+          f"OpenAlex citations: {stats['citations']}")
     for src, n in stats["sources"].items():
         print(f"    {n:4d}  {src}")
     print(f"    duplicates dropped: {stats['dups_dropped']} by title, "

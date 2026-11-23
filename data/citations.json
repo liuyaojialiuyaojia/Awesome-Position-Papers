@@ -1,0 +1,2181 @@
+{
+  "source": "OpenAlex",
+  "fetched_at": "2026-11-23",
+  "deferred_title_ids": [
+    "2308.07120",
+    "2402.00809",
+    "2404.08592",
+    "2405.02200",
+    "2502.14898",
+    "2502.21009",
+    "2503.05728",
+    "2504.13959",
+    "2505.00612",
+    "2505.17767",
+    "2505.17861",
+    "2506.17927",
+    "2506.18852",
+    "2507.02550",
+    "2507.09135",
+    "2508.04586",
+    "2508.16317",
+    "2509.21436",
+    "2510.14053",
+    "2510.22423",
+    "x021811e63809",
+    "x0259f529e4af",
+    "x04dd8688903f",
+    "x073689c7ed1e",
+    "x07df80cdf303",
+    "x0a5e7b67b5dc",
+    "x0aefef1d6cd8",
+    "x0c3de07be57d",
+    "x0d4673cc9325",
+    "x0d715b09552d",
+    "x0f424acad0cb",
+    "x10864e929c4c",
+    "x108d8a45a26d",
+    "x10e6ca7be963",
+    "x115cf2c0862e",
+    "x11662864bc1c",
+    "x14aa3a1b7885",
+    "x17f0a353bcee",
+    "x180c06a60a3c",
+    "x1987c709dbfb",
+    "x1b7ebd4783c4",
+    "x1ed4a5e85bf1",
+    "x1fe937bd3616",
+    "x1fee0a2147c7",
+    "x209bc8b2a162",
+    "x229a74b809e9",
+    "x2874fb5ca953",
+    "x28d655344489",
+    "x2d6bbbfbadc2",
+    "x2db3e466c970",
+    "x2de48e6bd856",
+    "x2f736b6bf703",
+    "x2f994a1b13b0",
+    "x31a0051bd216",
+    "x32b3aab8cde5",
+    "x3654e0705f3c",
+    "x373dbb8cacbe",
+    "x40d87541df6c",
+    "x40e354e9b8d2",
+    "x416545b43d0c",
+    "x4226963baf2a",
+    "x43aef18e60fa",
+    "x4424f3ce6b08",
+    "x44afd4e96a32",
+    "x467f0c8a087e",
+    "x46eddff6c555",
+    "x4879f5bb638a",
+    "x4bada8f02e8e",
+    "x4c02274984e6",
+    "x4d195a025b54",
+    "x4f3f956e5df0",
+    "x50fa92c6a40a",
+    "x5131c142d422",
+    "x51e2a5abc9e5",
+    "x52586fb9dbd6",
+    "x53257635e250",
+    "x53363f5dd75a",
+    "x55785ddc206c",
+    "x5671a68f3796",
+    "x57be73bd6468",
+    "x5986488d7041",
+    "x5ac754a27f8e",
+    "x5d4e59696d9a",
+    "x5e6bd458caaf",
+    "x643bbd6fbefe",
+    "x66193ac09e3f",
+    "x6b6f490f4064",
+    "x6bf16974671b",
+    "x70b58aca63a1",
+    "x735e162a87b9",
+    "x753271679a37",
+    "x76dbb0400dd6",
+    "x7af000a9cf75",
+    "x7b73ec70b149",
+    "x7e52a73f303a",
+    "x7ebfb3ac7554",
+    "x7f532addc2f1",
+    "x8241f2787f3c",
+    "x8272db62871a",
+    "x85dbb29656b6",
+    "x885d6b08fe14",
+    "x88ece42a5e09",
+    "x896bf7ce3f25",
+    "x89fbdb8ee6b6",
+    "x8b720436c405",
+    "x8ced12d95dac",
+    "x8d04563fe1f0",
+    "x8e21c740e977",
+    "x8e6a2bd7c1a2",
+    "x93d3c0e34a68",
+    "x97a093e6db93",
+    "x989f96d55efc",
+    "x98afab6aa753",
+    "x9c5dd3486b2b",
+    "x9cf779de9c98",
+    "x9f71ca148518",
+    "xa036c19c609f",
+    "xa35e37b7fe02",
+    "xa383e6a82f08",
+    "xa46a0610ca1a",
+    "xa4dd523a5eff",
+    "xa562a2fa6455",
+    "xa57542196829",
+    "xa71e7c2e6fb0",
+    "xaa092bc952b1",
+    "xac4034701fb0",
+    "xad26fa7d71e8",
+    "xae6da521b045",
+    "xb10fd2122080",
+    "xb15d03211419",
+    "xb1795ee43d3f",
+    "xb250dcbc440a",
+    "xb285c1f378e6",
+    "xb31bb1257e92",
+    "xb6d9696724c6",
+    "xb6f04c4ce5e1",
+    "xb7da1169e4f1",
+    "xbd9850f147e8",
+    "xbdce6323d812",
+    "xc14fc6d70f56",
+    "xc3e0f54a7c6a",
+    "xc7acf1abd073",
+    "xc7e724b27964",
+    "xc81995d010bf",
+    "xc81d47317505",
+    "xca7029edb244",
+    "xca748f4bdda5",
+    "xcead044c8edd",
+    "xcebc5103dafc",
+    "xd057b2d504ee",
+    "xd163b335a1af",
+    "xd26fa23447ac",
+    "xd33ea1de8cc9",
+    "xd38326514028",
+    "xd7acc75409a9",
+    "xd8130aa4dde3",
+    "xd8bb23e55e30",
+    "xdac459b96a3a",
+    "xdbec26d0d61d",
+    "xdcd067c94271",
+    "xddd671b034c3",
+    "xde2f501199bb",
+    "xdea42ad4274a",
+    "xe4a289682c37",
+    "xe6a7ef9d02f9",
+    "xe73e3382a7df",
+    "xebf07190def0",
+    "xee0d0d5a70c8",
+    "xf0dda4bca87c",
+    "xf1bfa70e865b",
+    "xf65b1b70b46c",
+    "xfa7efb61b6d2",
+    "xfcb96f7fd0d7"
+  ],
+  "papers": {
+    "2205.12961": {
+      "citations": 9,
+      "openalex_id": "https://openalex.org/W4281712173",
+      "matched_by": "arxiv_doi"
+    },
+    "2211.04325": {
+      "citations": 716,
+      "openalex_id": "https://openalex.org/W4308672130",
+      "matched_by": "arxiv_doi"
+    },
+    "2212.06470": {
+      "citations": 73,
+      "openalex_id": "https://openalex.org/W4311555033",
+      "matched_by": "arxiv_doi"
+    },
+    "2303.17707": {
+      "citations": 33,
+      "openalex_id": "https://openalex.org/W4362508267",
+      "matched_by": "arxiv_doi"
+    },
+    "2304.04736": {
+      "citations": 248,
+      "openalex_id": "https://openalex.org/W4364387756",
+      "matched_by": "arxiv_doi"
+    },
+    "2304.05366": {
+      "citations": 84,
+      "openalex_id": "https://openalex.org/W4365211686",
+      "matched_by": "arxiv_doi"
+    },
+    "2306.10512": {
+      "citations": 79,
+      "openalex_id": "https://openalex.org/W4381556776",
+      "matched_by": "arxiv_doi"
+    },
+    "2310.08540": {
+      "citations": 48,
+      "openalex_id": "https://openalex.org/W4387636023",
+      "matched_by": "arxiv_doi"
+    },
+    "2311.02462": {
+      "citations": 377,
+      "openalex_id": "https://openalex.org/W4388481599",
+      "matched_by": "arxiv_doi"
+    },
+    "2312.04615": {
+      "citations": 77,
+      "openalex_id": "https://openalex.org/W4389598999",
+      "matched_by": "arxiv_doi"
+    },
+    "2312.13234": {
+      "citations": 24,
+      "openalex_id": "https://openalex.org/W4390093029",
+      "matched_by": "arxiv_doi"
+    },
+    "2401.13782": {
+      "citations": 10,
+      "openalex_id": "https://openalex.org/W4391272135",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.01103": {
+      "citations": 71,
+      "openalex_id": "https://openalex.org/W4391555771",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.01444": {
+      "citations": 127,
+      "openalex_id": "https://openalex.org/W4391556074",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.01629": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4391556724",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.01857": {
+      "citations": 17,
+      "openalex_id": "https://openalex.org/W4391591708",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.02152": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W4391590798",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.02216": {
+      "citations": 128,
+      "openalex_id": "https://openalex.org/W4391590842",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.02287": {
+      "citations": 49,
+      "openalex_id": "https://openalex.org/W4391590923",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.02637": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4391591251",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.02713": {
+      "citations": 196,
+      "openalex_id": "https://openalex.org/W4391621391",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.03962": {
+      "citations": 9,
+      "openalex_id": "https://openalex.org/W4391670616",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.07318": {
+      "citations": 24,
+      "openalex_id": "https://openalex.org/W4391800963",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.07744": {
+      "citations": 28,
+      "openalex_id": "https://openalex.org/W4391800437",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.08871": {
+      "citations": 171,
+      "openalex_id": "https://openalex.org/W4409281560",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.13914": {
+      "citations": 20,
+      "openalex_id": "https://openalex.org/W4392090184",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.15332": {
+      "citations": 68,
+      "openalex_id": "https://openalex.org/W4392182362",
+      "matched_by": "arxiv_doi"
+    },
+    "2402.17139": {
+      "citations": 107,
+      "openalex_id": "https://openalex.org/W4392270920",
+      "matched_by": "arxiv_doi"
+    },
+    "2403.00833": {
+      "citations": 63,
+      "openalex_id": "https://openalex.org/W4392489968",
+      "matched_by": "arxiv_doi"
+    },
+    "2403.01208": {
+      "citations": 8,
+      "openalex_id": "https://openalex.org/W4392490693",
+      "matched_by": "arxiv_doi"
+    },
+    "2403.02118": {
+      "citations": 9,
+      "openalex_id": "https://openalex.org/W4392489476",
+      "matched_by": "arxiv_doi"
+    },
+    "2403.04893": {
+      "citations": 117,
+      "openalex_id": "https://openalex.org/W4392678070",
+      "matched_by": "arxiv_doi"
+    },
+    "2403.07918": {
+      "citations": 145,
+      "openalex_id": "https://openalex.org/W4392822106",
+      "matched_by": "arxiv_doi"
+    },
+    "2404.02113": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4393946054",
+      "matched_by": "arxiv_doi"
+    },
+    "2404.10271": {
+      "citations": 128,
+      "openalex_id": "https://openalex.org/W4394906159",
+      "matched_by": "arxiv_doi"
+    },
+    "2404.12691": {
+      "citations": 53,
+      "openalex_id": "https://openalex.org/W4395022310",
+      "matched_by": "arxiv_doi"
+    },
+    "2404.13861": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4395065326",
+      "matched_by": "arxiv_doi"
+    },
+    "2404.17047": {
+      "citations": 31,
+      "openalex_id": "https://openalex.org/W4396506709",
+      "matched_by": "arxiv_doi"
+    },
+    "2404.18316": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4396570430",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.01147": {
+      "citations": 99,
+      "openalex_id": "https://openalex.org/W4396641616",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.01349": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4396645989",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.01859": {
+      "citations": 45,
+      "openalex_id": "https://openalex.org/W4396779577",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.01964": {
+      "citations": 33,
+      "openalex_id": "https://openalex.org/W4396780921",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.02678": {
+      "citations": 59,
+      "openalex_id": "https://openalex.org/W4396717786",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.03547": {
+      "citations": 24,
+      "openalex_id": "https://openalex.org/W4396788156",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.17009": {
+      "citations": 12,
+      "openalex_id": "https://openalex.org/W4399198269",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.18095": {
+      "citations": 24,
+      "openalex_id": "https://openalex.org/W4399151876",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.18236": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4402157594",
+      "matched_by": "arxiv_doi"
+    },
+    "2405.18556": {
+      "citations": 25,
+      "openalex_id": "https://openalex.org/W4399197872",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.01352": {
+      "citations": 22,
+      "openalex_id": "https://openalex.org/W4399401057",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.01757": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W4399405355",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.02275": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4399419518",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.03348": {
+      "citations": 29,
+      "openalex_id": "https://openalex.org/W4399448095",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.03503": {
+      "citations": 30,
+      "openalex_id": "https://openalex.org/W4399453709",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.03980": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W4399455039",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.04152": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W4399455191",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.04268": {
+      "citations": 136,
+      "openalex_id": "https://openalex.org/W4399454695",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.06987": {
+      "citations": 30,
+      "openalex_id": "https://openalex.org/W4399598227",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.09264": {
+      "citations": 211,
+      "openalex_id": "https://openalex.org/W7196971834",
+      "matched_by": "arxiv_doi"
+    },
+    "2406.16241": {
+      "citations": 27,
+      "openalex_id": "https://openalex.org/W4400023640",
+      "matched_by": "arxiv_doi"
+    },
+    "2407.04846": {
+      "citations": 88,
+      "openalex_id": "https://openalex.org/W4400517495",
+      "matched_by": "arxiv_doi"
+    },
+    "2407.08188": {
+      "citations": 36,
+      "openalex_id": "https://openalex.org/W4400611527",
+      "matched_by": "arxiv_doi"
+    },
+    "2407.16186": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4406073724",
+      "matched_by": "arxiv_doi"
+    },
+    "2410.02879": {
+      "citations": 78,
+      "openalex_id": "https://openalex.org/W4410609217",
+      "matched_by": "arxiv_doi"
+    },
+    "2410.08385": {
+      "citations": 27,
+      "openalex_id": "https://openalex.org/W4403444121",
+      "matched_by": "arxiv_doi"
+    },
+    "2410.16423": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W4404260928",
+      "matched_by": "arxiv_doi"
+    },
+    "2411.09222": {
+      "citations": 14,
+      "openalex_id": "https://openalex.org/W7128133897",
+      "matched_by": "arxiv_doi"
+    },
+    "2412.00836": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4405033638",
+      "matched_by": "arxiv_doi"
+    },
+    "2412.06966": {
+      "citations": 95,
+      "openalex_id": "https://openalex.org/W4411270140",
+      "matched_by": "arxiv_doi"
+    },
+    "2412.11335": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W4405469812",
+      "matched_by": "arxiv_doi"
+    },
+    "2412.16075": {
+      "citations": 129,
+      "openalex_id": "https://openalex.org/W4405715707",
+      "matched_by": "arxiv_doi"
+    },
+    "2412.19726": {
+      "citations": 34,
+      "openalex_id": "https://openalex.org/W4405903515",
+      "matched_by": "arxiv_doi"
+    },
+    "2501.09906": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4406603890",
+      "matched_by": "arxiv_doi"
+    },
+    "2501.10711": {
+      "citations": 28,
+      "openalex_id": "https://openalex.org/W4406703766",
+      "matched_by": "arxiv_doi"
+    },
+    "2501.18915": {
+      "citations": 32,
+      "openalex_id": "https://openalex.org/W4407093434",
+      "matched_by": "arxiv_doi"
+    },
+    "2501.19173": {
+      "citations": 18,
+      "openalex_id": "https://openalex.org/W4407091411",
+      "matched_by": "arxiv_doi"
+    },
+    "2501.19183": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W4407091379",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.00561": {
+      "citations": 119,
+      "openalex_id": "https://openalex.org/W4407123721",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.00874": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W4407124202",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.01677": {
+      "citations": 17,
+      "openalex_id": "https://openalex.org/W4407184778",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.01714": {
+      "citations": 40,
+      "openalex_id": "https://openalex.org/W4407184838",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.02076": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4407185645",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.02260": {
+      "citations": 33,
+      "openalex_id": "https://openalex.org/W4407186130",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.02871": {
+      "citations": 54,
+      "openalex_id": "https://openalex.org/W4407212464",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.02958": {
+      "citations": 24,
+      "openalex_id": "https://openalex.org/W4407213240",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.03689": {
+      "citations": 30,
+      "openalex_id": "https://openalex.org/W4407244646",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.03876": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4407245011",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.04358": {
+      "citations": 10,
+      "openalex_id": "https://openalex.org/W4407308223",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.04388": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4416252276",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.05085": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4407310252",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.05467": {
+      "citations": 41,
+      "openalex_id": "https://openalex.org/W4416036264",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.06560": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W4407359131",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.06753": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W7123236626",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.06975": {
+      "citations": 70,
+      "openalex_id": "https://openalex.org/W4407423795",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.10420": {
+      "citations": 10,
+      "openalex_id": "https://openalex.org/W4407126681",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.12430": {
+      "citations": 10,
+      "openalex_id": "https://openalex.org/W7196937089",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.14546": {
+      "citations": 82,
+      "openalex_id": "https://openalex.org/W4407806978",
+      "matched_by": "arxiv_doi"
+    },
+    "2502.20016": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W4416150227",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.00093": {
+      "citations": 8,
+      "openalex_id": "https://openalex.org/W4415080951",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.01470": {
+      "citations": 12,
+      "openalex_id": "https://openalex.org/W4415084805",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.01747": {
+      "citations": 33,
+      "openalex_id": "https://openalex.org/W4416045832",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.02113": {
+      "citations": 54,
+      "openalex_id": "https://openalex.org/W4416282377",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.03150": {
+      "citations": 47,
+      "openalex_id": "https://openalex.org/W4416083903",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.05822": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W4414564916",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.10633": {
+      "citations": 43,
+      "openalex_id": "https://openalex.org/W4414884221",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.10694": {
+      "citations": 69,
+      "openalex_id": "https://openalex.org/W4417280536",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.16456": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W4417149528",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.16527": {
+      "citations": 149,
+      "openalex_id": "https://openalex.org/W4417149595",
+      "matched_by": "arxiv_doi"
+    },
+    "2503.17359": {
+      "citations": 21,
+      "openalex_id": "https://openalex.org/W4417159220",
+      "matched_by": "arxiv_doi"
+    },
+    "2504.02234": {
+      "citations": 251,
+      "openalex_id": "https://openalex.org/W4409719234",
+      "matched_by": "arxiv_doi"
+    },
+    "2504.06549": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W4417244026",
+      "matched_by": "arxiv_doi"
+    },
+    "2504.07170": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W4416429864",
+      "matched_by": "arxiv_doi"
+    },
+    "2504.08896": {
+      "citations": 22,
+      "openalex_id": "https://openalex.org/W4415153734",
+      "matched_by": "arxiv_doi"
+    },
+    "2504.09762": {
+      "citations": 75,
+      "openalex_id": "https://openalex.org/W4415035338",
+      "matched_by": "arxiv_doi"
+    },
+    "2504.11511": {
+      "citations": 8,
+      "openalex_id": "https://openalex.org/W4416251285",
+      "matched_by": "arxiv_doi"
+    },
+    "2504.12427": {
+      "citations": 29,
+      "openalex_id": "https://openalex.org/W4417089072",
+      "matched_by": "arxiv_doi"
+    },
+    "2504.13101": {
+      "citations": 14,
+      "openalex_id": "https://openalex.org/W4415202861",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.00018": {
+      "citations": 31,
+      "openalex_id": "https://openalex.org/W4416388703",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.00985": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4415026092",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.02072": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4415030262",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.03798": {
+      "citations": 25,
+      "openalex_id": "https://openalex.org/W4415249249",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.04104": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W4416095417",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.04966": {
+      "citations": 44,
+      "openalex_id": "https://openalex.org/W4416097654",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.08818": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4414937565",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.11866": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W4416250838",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.16007": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W4416446005",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.18139": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W7196966419",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.18371": {
+      "citations": 20,
+      "openalex_id": "https://openalex.org/W4414581178",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.18471": {
+      "citations": 17,
+      "openalex_id": "https://openalex.org/W4414581342",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.19614": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W4414586769",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.19825": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4414587255",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.20254": {
+      "citations": 18,
+      "openalex_id": "https://openalex.org/W4414588429",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.20628": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W4415036044",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.21298": {
+      "citations": 47,
+      "openalex_id": "https://openalex.org/W4417307792",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.21550": {
+      "citations": 17,
+      "openalex_id": "https://openalex.org/W4416046068",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.22450": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4416048480",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.22655": {
+      "citations": 49,
+      "openalex_id": "https://openalex.org/W4416048740",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.22778": {
+      "citations": 18,
+      "openalex_id": "https://openalex.org/W4416602522",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.23506": {
+      "citations": 18,
+      "openalex_id": "https://openalex.org/W4417047369",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.23543": {
+      "citations": 13,
+      "openalex_id": "https://openalex.org/W4416251458",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.23814": {
+      "citations": 16,
+      "openalex_id": "https://openalex.org/W4414855120",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.23947": {
+      "citations": 27,
+      "openalex_id": "https://openalex.org/W4414855639",
+      "matched_by": "arxiv_doi"
+    },
+    "2505.24874": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W4414859106",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.00398": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4414889983",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.00886": {
+      "citations": 35,
+      "openalex_id": "https://openalex.org/W4414893745",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.02075": {
+      "citations": 16,
+      "openalex_id": "https://openalex.org/W4415130459",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.03218": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4416071439",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.03670": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W4416073537",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.03779": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W4416073801",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.05109": {
+      "citations": 20,
+      "openalex_id": "https://openalex.org/W4416137596",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.05701": {
+      "citations": 29,
+      "openalex_id": "https://openalex.org/W4417097176",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.06958": {
+      "citations": 22,
+      "openalex_id": "https://openalex.org/W4417321068",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.08134": {
+      "citations": 24,
+      "openalex_id": "https://openalex.org/W4417255555",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.08354": {
+      "citations": 16,
+      "openalex_id": "https://openalex.org/W4417256363",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.10272": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4417349496",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.11466": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W4415068752",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.13024": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4415070711",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.13479": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W4415108942",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.14652": {
+      "citations": 18,
+      "openalex_id": "https://openalex.org/W4415312666",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.19613": {
+      "citations": 10,
+      "openalex_id": "https://openalex.org/W4414684293",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.19882": {
+      "citations": 12,
+      "openalex_id": "https://openalex.org/W7196931119",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.23286": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W4416512623",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.23845": {
+      "citations": 33,
+      "openalex_id": "https://openalex.org/W4416522814",
+      "matched_by": "arxiv_doi"
+    },
+    "2506.23978": {
+      "citations": 9,
+      "openalex_id": "https://openalex.org/W4414687620",
+      "matched_by": "arxiv_doi"
+    },
+    "2507.00163": {
+      "citations": 12,
+      "openalex_id": "https://openalex.org/W4416848249",
+      "matched_by": "arxiv_doi"
+    },
+    "2507.07544": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W4416284950",
+      "matched_by": "arxiv_doi"
+    },
+    "2507.07820": {
+      "citations": 12,
+      "openalex_id": "https://openalex.org/W7197017734",
+      "matched_by": "arxiv_doi"
+    },
+    "2507.09296": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4414691854",
+      "matched_by": "arxiv_doi"
+    },
+    "2507.15584": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W4417493425",
+      "matched_by": "arxiv_doi"
+    },
+    "2507.16863": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W4414877033",
+      "matched_by": "arxiv_doi"
+    },
+    "2507.23009": {
+      "citations": 14,
+      "openalex_id": "https://openalex.org/W4414930580",
+      "matched_by": "arxiv_doi"
+    },
+    "2508.06017": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W4415192223",
+      "matched_by": "arxiv_doi"
+    },
+    "2508.08337": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W4416243633",
+      "matched_by": "arxiv_doi"
+    },
+    "2508.08883": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W4415194513",
+      "matched_by": "arxiv_doi"
+    },
+    "2508.14927": {
+      "citations": 10,
+      "openalex_id": "https://openalex.org/W4416050231",
+      "matched_by": "arxiv_doi"
+    },
+    "2508.18076": {
+      "citations": 51,
+      "openalex_id": "https://openalex.org/W4414430238",
+      "matched_by": "arxiv_doi"
+    },
+    "2509.08833": {
+      "citations": 10,
+      "openalex_id": "https://openalex.org/W7114651645",
+      "matched_by": "arxiv_doi"
+    },
+    "2509.13339": {
+      "citations": 8,
+      "openalex_id": "https://openalex.org/W4416258856",
+      "matched_by": "arxiv_doi"
+    },
+    "2509.14597": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4417081698",
+      "matched_by": "arxiv_doi"
+    },
+    "2509.18132": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W4416251448",
+      "matched_by": "arxiv_doi"
+    },
+    "2509.19041": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4416254413",
+      "matched_by": "arxiv_doi"
+    },
+    "2509.21882": {
+      "citations": 18,
+      "openalex_id": "https://openalex.org/W4416830687",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.00075": {
+      "citations": 8,
+      "openalex_id": "https://openalex.org/W7196967129",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.01645": {
+      "citations": 33,
+      "openalex_id": "https://openalex.org/W4414818137",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.03081": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W4416371021",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.06927": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4415317657",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.07409": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W4416394456",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.07575": {
+      "citations": 15,
+      "openalex_id": "https://openalex.org/W4416395869",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.09686": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W4417155840",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.15280": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4415877562",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.18238": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W4416055651",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.18333": {
+      "citations": 10,
+      "openalex_id": "https://openalex.org/W4416056051",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.18934": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W4416057724",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.21219": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7197038898",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.22095": {
+      "citations": 9,
+      "openalex_id": "https://openalex.org/W7196986158",
+      "matched_by": "arxiv_doi"
+    },
+    "2510.25368": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W7197022016",
+      "matched_by": "arxiv_doi"
+    },
+    "2511.00027": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W4416430936",
+      "matched_by": "arxiv_doi"
+    },
+    "2511.00202": {
+      "citations": 27,
+      "openalex_id": "https://openalex.org/W4415002704",
+      "matched_by": "arxiv_doi"
+    },
+    "2511.01077": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4416434764",
+      "matched_by": "arxiv_doi"
+    },
+    "2511.01253": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4415945543",
+      "matched_by": "arxiv_doi"
+    },
+    "2511.06305": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7105098161",
+      "matched_by": "arxiv_doi"
+    },
+    "2511.10381": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W4416239011",
+      "matched_by": "arxiv_doi"
+    },
+    "2511.19504": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7106820257",
+      "matched_by": "arxiv_doi"
+    },
+    "2512.03077": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W4417024830",
+      "matched_by": "arxiv_doi"
+    },
+    "2512.05765": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W4417143464",
+      "matched_by": "arxiv_doi"
+    },
+    "2512.11883": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W4417446043",
+      "matched_by": "arxiv_doi"
+    },
+    "2512.18792": {
+      "citations": 22,
+      "openalex_id": "https://openalex.org/W7117161621",
+      "matched_by": "arxiv_doi"
+    },
+    "2512.22702": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7117735304",
+      "matched_by": "arxiv_doi"
+    },
+    "2601.07189": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7123782076",
+      "matched_by": "arxiv_doi"
+    },
+    "2601.07389": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W7123646753",
+      "matched_by": "arxiv_doi"
+    },
+    "2601.07419": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W7123688595",
+      "matched_by": "arxiv_doi"
+    },
+    "2601.09966": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7124460728",
+      "matched_by": "arxiv_doi"
+    },
+    "2601.18076": {
+      "citations": 8,
+      "openalex_id": "https://openalex.org/W7125826934",
+      "matched_by": "arxiv_doi"
+    },
+    "2601.21016": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7126184242",
+      "matched_by": "arxiv_doi"
+    },
+    "2601.21249": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7126245697",
+      "matched_by": "arxiv_doi"
+    },
+    "2601.21632": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7126233788",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.00359": {
+      "citations": 27,
+      "openalex_id": "https://openalex.org/W7127411167",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.00785": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7127302198",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.00854": {
+      "citations": 17,
+      "openalex_id": "https://openalex.org/W7127450025",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.01736": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W7127318738",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.01776": {
+      "citations": 19,
+      "openalex_id": "https://openalex.org/W7127324940",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.02005": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7127320359",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.02239": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7127271719",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.02304": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7127426701",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.02595": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7127596686",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.02602": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7127620728",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.04056": {
+      "citations": 19,
+      "openalex_id": "https://openalex.org/W7127944486",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.04990": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7128020573",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.05164": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7127973153",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.05287": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7128086083",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.06078": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7128357055",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.10031": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7128635954",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.14233": {
+      "citations": 34,
+      "openalex_id": "https://openalex.org/W7129757468",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.14910": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7129449302",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.16698": {
+      "citations": 12,
+      "openalex_id": "https://openalex.org/W7130538568",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.16864": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W7130710347",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.17245": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7130729999",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.17531": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7130700027",
+      "matched_by": "arxiv_doi"
+    },
+    "2602.19789": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7131388465",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.00643": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7133355510",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.01761": {
+      "citations": 13,
+      "openalex_id": "https://openalex.org/W7133334752",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.02218": {
+      "citations": 16,
+      "openalex_id": "https://openalex.org/W7129088165",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.04292": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7133766259",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.04555": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7134058200",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.07368": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W7134829213",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.19091": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7139911078",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.20595": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7140175134",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.26676": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7147493867",
+      "matched_by": "arxiv_doi"
+    },
+    "2603.28597": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7147730471",
+      "matched_by": "arxiv_doi"
+    },
+    "2604.03244": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W7151577289",
+      "matched_by": "arxiv_doi"
+    },
+    "2604.04177": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7151219429",
+      "matched_by": "arxiv_doi"
+    },
+    "2604.07360": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7153089231",
+      "matched_by": "arxiv_doi"
+    },
+    "2604.07962": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W7152992846",
+      "matched_by": "arxiv_doi"
+    },
+    "2604.10557": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7154402926",
+      "matched_by": "arxiv_doi"
+    },
+    "2604.18649": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7155176931",
+      "matched_by": "arxiv_doi"
+    },
+    "2604.21169": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7155489809",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.00742": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7126019501",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.01147": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W7160339272",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.01280": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7160272929",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.01428": {
+      "citations": 8,
+      "openalex_id": "https://openalex.org/W7160242104",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.02010": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7160257602",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.02452": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7160293247",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.02640": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7160283758",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.04127": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7160539567",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.05017": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7160520816",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.05403": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7160620761",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.06077": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7160658995",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.08012": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7160831572",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.08586": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7160949376",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.08956": {
+      "citations": 13,
+      "openalex_id": "https://openalex.org/W7160941865",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.09365": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7160933241",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.09915": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7160951745",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.10404": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7160932559",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.10425": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7160888004",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.11733": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7161008126",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.12678": {
+      "citations": 19,
+      "openalex_id": "https://openalex.org/W7161108541",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.12966": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7161122237",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.13095": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7161182775",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.13579": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7161160086",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.14604": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7161268833",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.15164": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7161300875",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.15253": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7126217174",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.15567": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7161580501",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.15622": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7161539466",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.15714": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7161593410",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.16197": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7161545151",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.17273": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7161723420",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.17347": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7161745343",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.18632": {
+      "citations": 8,
+      "openalex_id": "https://openalex.org/W7161749539",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.18672": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7161690279",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.18801": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7161802152",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.18893": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7161848880",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.18991": {
+      "citations": 12,
+      "openalex_id": "https://openalex.org/W7161786555",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.19220": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7161754815",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.19514": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7161827369",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.21765": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7162133892",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.22632": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7162067410",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.24558": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7162463886",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.24688": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7162422264",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.27117": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7162526072",
+      "matched_by": "arxiv_doi"
+    },
+    "2605.28597": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7162631461",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.00002": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7163198610",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.00871": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7163237326",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.00873": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7163129564",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.01036": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7163170309",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.02632": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7163369920",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.04029": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7163546429",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.06533": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W7163953934",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.07607": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7164047164",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.07612": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W7164024018",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.07629": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7164068847",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.07632": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7164048471",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.10669": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7164191741",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.11245": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7164378587",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.12439": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W7164585760",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.13704": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7164824876",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.13755": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7164806077",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.14795": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7164940193",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.17799": {
+      "citations": 9,
+      "openalex_id": "https://openalex.org/W7165054107",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.23175": {
+      "citations": 6,
+      "openalex_id": "https://openalex.org/W7165658074",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.25527": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7165852300",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.27379": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7166551765",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.28347": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7134913097",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.28433": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7166642976",
+      "matched_by": "arxiv_doi"
+    },
+    "2606.30686": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7166796181",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.05407": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7167721639",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.09668": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7161209532",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.14123": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7169587851",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.15313": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7169761869",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.16652": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7169880927",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.18263": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7170045897",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.18281": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7170058186",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.20432": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7170713653",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.20532": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7170858643",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.22024": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7171391727",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.26064": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7171857553",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.26191": {
+      "citations": 5,
+      "openalex_id": "https://openalex.org/W7166890463",
+      "matched_by": "arxiv_doi"
+    },
+    "2607.27209": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7171961016",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.05188": {
+      "citations": 9,
+      "openalex_id": "https://openalex.org/W7201849166",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.07505": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7202206439",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.12325": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7171479068",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.12346": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7203445085",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.12372": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7203481876",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.13566": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7203609725",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.14565": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7203690457",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.14566": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7166866124",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.14568": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7203727134",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.14569": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7203682241",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.14571": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7203720179",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.14598": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7203728096",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.14667": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7203661285",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.16974": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7163782155",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.18078": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7203895978",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.18079": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7203913797",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.18081": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7203950223",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.18086": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7203920908",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.18092": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7203953549",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.18117": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7203907708",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.21410": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7204203583",
+      "matched_by": "arxiv_doi"
+    },
+    "2608.23642": {
+      "citations": 20,
+      "openalex_id": "https://openalex.org/W7204270471",
+      "matched_by": "arxiv_doi"
+    },
+    "2609.01273": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7206203668",
+      "matched_by": "arxiv_doi"
+    },
+    "2609.03077": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7208763830",
+      "matched_by": "arxiv_doi"
+    },
+    "2609.11942": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7171417315",
+      "matched_by": "arxiv_doi"
+    },
+    "2609.16189": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7213394465",
+      "matched_by": "arxiv_doi"
+    },
+    "2609.19203": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7213591067",
+      "matched_by": "arxiv_doi"
+    },
+    "2609.20083": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7213612339",
+      "matched_by": "arxiv_doi"
+    },
+    "2609.34458": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7214741643",
+      "matched_by": "arxiv_doi"
+    },
+    "2609.35854": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7214956177",
+      "matched_by": "arxiv_doi"
+    },
+    "2609.35880": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7214956313",
+      "matched_by": "arxiv_doi"
+    },
+    "2610.02081": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7216532091",
+      "matched_by": "arxiv_doi"
+    },
+    "2610.08825": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7221199513",
+      "matched_by": "arxiv_doi"
+    },
+    "2610.12518": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7221562628",
+      "matched_by": "arxiv_doi"
+    },
+    "2610.17409": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7221784518",
+      "matched_by": "arxiv_doi"
+    },
+    "2610.28479": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7223155215",
+      "matched_by": "arxiv_doi"
+    },
+    "2610.28646": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7223234281",
+      "matched_by": "arxiv_doi"
+    },
+    "2611.01620": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7225173913",
+      "matched_by": "arxiv_doi"
+    },
+    "2611.03166": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7225146050",
+      "matched_by": "arxiv_doi"
+    },
+    "2611.03756": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7225238785",
+      "matched_by": "arxiv_doi"
+    },
+    "2611.10501": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7225736656",
+      "matched_by": "arxiv_doi"
+    },
+    "2611.12941": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7225827809",
+      "matched_by": "arxiv_doi"
+    },
+    "2611.14594": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7226002736",
+      "matched_by": "arxiv_doi"
+    },
+    "2611.18982": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7235027319",
+      "matched_by": "arxiv_doi"
+    },
+    "x1162facb8e5b": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7161122237",
+      "matched_by": "arxiv_doi"
+    },
+    "x160776f67d45": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7166158435",
+      "matched_by": "exact_title"
+    },
+    "x184944053664": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7128115965",
+      "matched_by": "exact_title"
+    },
+    "x1e6b13efb117": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7171716861",
+      "matched_by": "exact_title"
+    },
+    "x1f219a4d0ada": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7134919366",
+      "matched_by": "exact_title"
+    },
+    "x495c9b382bc1": {
+      "citations": 3,
+      "openalex_id": "https://openalex.org/W7134915216",
+      "matched_by": "exact_title"
+    },
+    "x4b7f6c43d365": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7164824876",
+      "matched_by": "arxiv_doi"
+    },
+    "x61d28f459e09": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7171684429",
+      "matched_by": "exact_title"
+    },
+    "x6442843927d1": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7126019501",
+      "matched_by": "exact_title"
+    },
+    "x6d1051399135": {
+      "citations": 7,
+      "openalex_id": "https://openalex.org/W7163953934",
+      "matched_by": "arxiv_doi"
+    },
+    "x7e2fdf209544": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7165790837",
+      "matched_by": "exact_title"
+    },
+    "x8eace02f6580": {
+      "citations": 0,
+      "openalex_id": "https://openalex.org/W7160067725",
+      "matched_by": "exact_title"
+    },
+    "x932d57d6e940": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7203481876",
+      "matched_by": "arxiv_doi"
+    },
+    "x9c47806996ee": {
+      "citations": 11,
+      "openalex_id": "https://openalex.org/W7130710347",
+      "matched_by": "arxiv_doi"
+    },
+    "xa0ed30e67aa8": {
+      "citations": 9,
+      "openalex_id": "https://openalex.org/W7201849166",
+      "matched_by": "arxiv_doi"
+    },
+    "xb35d0ae3ae0e": {
+      "citations": 4,
+      "openalex_id": "https://openalex.org/W7128740621",
+      "matched_by": "exact_title"
+    },
+    "xd3ed3cd06b01": {
+      "citations": 1,
+      "openalex_id": "https://openalex.org/W7163483298",
+      "matched_by": "exact_title"
+    },
+    "xfb45ccf2ee4f": {
+      "citations": 2,
+      "openalex_id": "https://openalex.org/W7161827369",
+      "matched_by": "arxiv_doi"
+    }
+  }
+}

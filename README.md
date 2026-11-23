@@ -181,13 +181,13 @@ Coverage: **ICML 2024–2026** and **NeurIPS 2025–2026** position tracks, plus
 
 ## Full paper list
 
-[Open the searchable website](docs/index.html) for all 638 papers, with topic, venue, and year filters.
+[Open the searchable website](docs/index.html) for all 638 papers, with topic/venue/year filters and citation sorting.
 
 ## How it is built
 
 - `collect_*.py` gathers public metadata; `build_dataset.py` deduplicates it and applies curated topics, stances, and exclusions.
-- `stats.py` computes every number and chart; `build_readme.py` generates both guides from `data/papers.csv` and `data/curated/`.
-- Rebuild with `.venv/bin/python scripts/build_dataset.py`, then `.venv/bin/python scripts/stats.py`, then `.venv/bin/python scripts/build_readme.py`.
+- `fetch_citations.py` records dated OpenAlex counts; `stats.py` computes every number and chart; `build_readme.py` generates both guides.
+- Rebuild in order: `build_dataset.py`, `fetch_citations.py`, `stats.py`, `build_readme.py`, `build_site.py`; run each as `.venv/bin/python scripts/<script>`.
 
 ## Citation
 

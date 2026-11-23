@@ -231,7 +231,7 @@ HTML = r"""<!doctype html>
       </div>
       <div class="results-bar">
         <p class="result-count" id="result-count" role="status" aria-live="polite">Loading papers…</p>
-        <p class="draft-note">Stances and topics are abstract-level drafts.</p>
+        <p class="draft-note">Stances and topics are abstract-level drafts.__CITATION_NOTE__</p>
       </div>
       <div class="paper-list" id="paper-list" aria-busy="true"></div>
       <div class="empty-state" id="empty-state" hidden>
@@ -547,6 +547,9 @@ def build_payload(rows: list[dict], essentials: dict, debates: dict, generated_a
 
 def build_html(payload: dict) -> str:
     citations_available = any(paper["citations"] is not None for paper in payload["papers"])
+    citation_note = ""
+    if citations_available and payload.get("citation_fetched_at"):
+        citation_note = f" Citations: OpenAlex, {payload['citation_fetched_at']}."
     replacements = {
         "__PAPER_COUNT__": str(len(payload["papers"])),
         "__ESSENTIAL_COUNT__": str(sum(paper["essential"] for paper in payload["papers"])),
@@ -554,6 +557,7 @@ def build_html(payload: dict) -> str:
         "__GENERATED_AT__": payload["generated_at"],
         "__CITATION_OPTION__": ('<option value="citations">Citations: most first</option>'
                                  if citations_available else ""),
+        "__CITATION_NOTE__": citation_note,
     }
     page = HTML
     for marker, value in replacements.items():
@@ -573,6 +577,12 @@ def main() -> None:
     essentials = load_yaml(os.path.join(C.DATA, "curated", "essentials.yaml"))
     debates = load_yaml(os.path.join(C.DATA, "curated", "debates.yaml"))
     payload = build_payload(C.read_csv(args.csv), essentials, debates, stats["generated_at"])
+    citation_path = os.path.join(C.DATA, "citations.json")
+    if os.path.exists(citation_path):
+        with open(citation_path, encoding="utf-8") as handle:
+            citation_snapshot = json.load(handle)
+        payload["citation_source"] = citation_snapshot["source"]
+        payload["citation_fetched_at"] = citation_snapshot["fetched_at"]
 
     os.makedirs(args.out, exist_ok=True)
     json_path = os.path.join(args.out, "papers.json")

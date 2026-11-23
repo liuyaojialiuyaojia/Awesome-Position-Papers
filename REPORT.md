@@ -4,6 +4,19 @@ This file documents the first full build of the dataset: what was collected,
 how many papers each source produced, which sources failed, known gaps, and
 the exact commands to rerun everything.
 
+## Citations via OpenAlex (2026-11-23)
+
+`scripts/fetch_citations.py` now uses OpenAlex without a key or email. It batches arXiv DOI aliases, falls back to exact normalised-title matches, caches successful responses, and writes a dated audit snapshot to `data/citations.json`.
+
+- **Coverage:** 400 of 647 CSV rows have counts: 389 matched by arXiv DOI and 11 by exact title. Public coverage is 391 of 638 papers; the snapshot contains 7,908 citations in total.
+- **Unresolved:** 173 uncached title searches were deferred after repeated OpenAlex HTTP 429 responses. Another 74 searched titles had no exact match. These 247 rows keep empty citation cells; no counts were guessed.
+- **Integration:** `build_dataset.py` reapplies the snapshot on every rebuild. The website shows counts, enables most-cited sorting, and labels the source and fetch date. Both READMEs mention the feature only in their existing website and build lines.
+- **Validation:** all snapshot ids, counts, methods, CSV values, public JSON values, and generated HTML markers were checked. The locally served `index.html` and `papers.json` both returned HTTP 200. Python syntax checks passed for every script.
+
+Rerun `.venv/bin/python scripts/fetch_citations.py` to resume deferred title searches. To reproduce the shipped snapshot without new title requests, append `--cached-titles-only`.
+
+Known problems: citation counts are an OpenAlex snapshot, not live values or a quality ranking. A real Chromium session could not start because `libatomic.so.1` is absent; browser interaction remains unverified, while static, data, and local HTTP checks passed.
+
 ## Candidate filtering (2026-11-23)
 
 `scripts/filter_candidates.py` flags candidates without a model and writes `data/filter_candidates.jsonl`; it never excludes a row by itself. Only the 24 flagged rows were reviewed. Confirmed decisions live in `data/curated/filter.jsonl`.
@@ -115,10 +128,7 @@ title.
 - **Semantic Scholar (`api.semanticscholar.org`)** — HTTP 429 on both the
   single-paper and batch endpoints even after several minutes of back-off.
   **No API key was available in this environment, so it was never tested with
-  one**: the `citations` column is empty, which is the honest outcome rather
-  than a guessed number. To fill it, rerun
-  `SEMANTIC_SCHOLAR_KEY=... .venv/bin/python scripts/fetch_citations.py` on a
-  machine that has a key.
+  one.** The current citation workflow uses OpenAlex instead and requires no key.
 
 ## Known gaps
 
@@ -141,7 +151,7 @@ title.
 - **Stance summaries** — extractive: first abstract sentence with a stance cue,
   else first normative sentence, else the title clause. Clumsy phrasing is
   expected; the summaries are drafts.
-- **Citations** — empty (Semantic Scholar 429).
+- **Citations** — OpenAlex counts are a dated snapshot, not live values; rows without a verified match stay empty.
 
 ## Rerun commands
 
@@ -156,9 +166,10 @@ python -m venv .venv
 .venv/bin/python scripts/collect_neurips.py
 .venv/bin/python scripts/collect_arxiv.py
 .venv/bin/python scripts/build_dataset.py
-.venv/bin/python scripts/fetch_citations.py   # optional; gives up cleanly on 429
+.venv/bin/python scripts/fetch_citations.py   # OpenAlex; cached; no key required
 .venv/bin/python scripts/stats.py
 .venv/bin/python scripts/build_readme.py
+.venv/bin/python scripts/build_site.py
 ```
 
 Second runs are near-instant because every raw API response is cached under
@@ -169,6 +180,7 @@ Second runs are near-instant because every raw API response is cached under
 ```
 data/
   papers.csv          # one row per deduplicated paper
+  citations.json      # dated OpenAlex counts and match audit trail
   stats.json          # counts, years, charts list
   taxonomy.yaml       # the 15-topic taxonomy
   raw/                # intermediate collector outputs (git-ignored)

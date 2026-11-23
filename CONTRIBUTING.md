@@ -23,7 +23,7 @@ the collector so the next full run also produces it.
 | `year`, `venue`, `track` | venue year wins over the arXiv submission year; `venue` is `ICML`, `NeurIPS`, `arXiv-only`, or another venue if the paper's own arXiv comment names one |
 | `url` | arXiv abstract page when an id exists, else the official venue page |
 | `topic`, `stance_summary` | curated draft from `data/curated/stances.jsonl`; automatic fallback for new papers — see below |
-| `citations` | usually empty: Semantic Scholar is rate-limited without a key (see `REPORT.md`) |
+| `citations` | OpenAlex count from `data/citations.json`; empty when no DOI/arXiv or exact-title match exists |
 | `source` | which collector produced the row; do not hand it off |
 | `excluded` | `true` for reviewed rows hidden from public views; otherwise `false` |
 

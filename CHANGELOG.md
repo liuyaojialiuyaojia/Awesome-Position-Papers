@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23 — Citations via OpenAlex
+
+- Replaced the Semantic Scholar fetcher with cached OpenAlex matching by batched arXiv DOI, then exact normalised title. Added `data/citations.json` with the 2026-11-23 fetch date, OpenAlex ids, match methods, and deferred title ids.
+- Filled 400 of 647 CSV rows: 389 arXiv-DOI matches and 11 exact-title matches, totalling 7,908 citations. Public coverage is 391 of 638 papers. `build_dataset.py` now preserves the snapshot across rebuilds.
+- Enabled the website's existing most-cited sort, added a small OpenAlex/date note, regenerated stats, charts, both READMEs, and the site. Validated all generated counts and ids, Python syntax, and HTTP 200 responses for the locally served HTML and JSON.
+- Known problems: repeated OpenAlex HTTP 429 responses left 173 title searches deferred; 74 other searched titles had no exact match, so 247 rows remain empty. Chromium could not start because `libatomic.so.1` is missing; browser interaction remains unverified.
+
 ## 2026-11-23 — Website
 
 - Added `scripts/build_site.py`, which generates `docs/index.html` and `docs/papers.json` with 638 public papers, 40 essential reads, and 10 debates covering 23 paper entries. Excluded rows stay out of the site.
