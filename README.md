@@ -181,13 +181,13 @@ Coverage: **ICML 2024–2026** and **NeurIPS 2025–2026** position tracks, plus
 
 ## Full paper list
 
-[Open the searchable website](docs/index.html) for all 638 papers, with topic/venue/year filters and citation sorting.
+[Open the searchable website](https://liuyaojialiuyaojia.github.io/Awesome-Position-Papers/) for all 638 papers, with topic/venue/year filters and citation sorting.
 
 ## How it is built
 
 - `collect_*.py` gathers public metadata; `build_dataset.py` deduplicates it and applies curated topics, stances, and exclusions.
 - `fetch_citations.py` records dated OpenAlex counts; `stats.py` computes every number and chart; `build_readme.py` generates both guides.
-- Rebuild in order: `build_dataset.py`, `fetch_citations.py`, `stats.py`, `build_readme.py`, `build_site.py`; run each as `.venv/bin/python scripts/<script>`.
+- Rebuild everything with `bash scripts/update_all.sh`; new papers without curated text are listed in `data/needs_curation.csv`.
 
 ## Citation
 
@@ -198,7 +198,7 @@ Dataset and text: **CC BY 4.0** ([license](LICENSE)). Papers remain their author
   title        = {Awesome Position Papers: A Data-Backed Map of AI/ML Position Papers},
   author       = {Awesome Position Papers contributors},
   year         = {2026},
-  howpublished = {GitHub repository: awesome-position-papers},
+  howpublished = {\url{https://github.com/liuyaojialiuyaojia/Awesome-Position-Papers}},
   note         = {638 papers, CC BY 4.0}
 }
 ```

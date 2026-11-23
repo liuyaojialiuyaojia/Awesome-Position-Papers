@@ -159,9 +159,10 @@ HTML = r"""<!doctype html>
     @media (max-width: 720px) {
       .container { width: min(100% - 28px, 1120px); }
       .header-inner { min-height: 66px; gap: 10px; }
-      .brand { max-width: 120px; line-height: 1.2; }
+      .brand { white-space: nowrap; font-size: 0.92rem; }
+      .brand-extra { display: none; }
       .header-actions { gap: 6px; }
-      .view-button, .theme-button { padding-inline: 10px; font-size: 0.85rem; }
+      .view-button, .theme-button { padding-inline: 9px; font-size: 0.85rem; }
       .hero { padding: 38px 0 26px; }
       .control-top, .paper-list { grid-template-columns: 1fr; }
       .controls { padding: 16px; }
@@ -180,7 +181,7 @@ HTML = r"""<!doctype html>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="./">Awesome Position Papers</a>
+      <a class="brand" href="./"><span class="brand-extra">Awesome </span>Position Papers</a>
       <div class="header-actions">
         <nav class="view-nav" aria-label="Views">
           <button class="view-button" id="papers-view-button" type="button" aria-pressed="true" aria-controls="papers-view">Papers</button>
@@ -355,7 +356,7 @@ HTML = r"""<!doctype html>
         var meta = element("div", "paper-meta");
         meta.appendChild(element("span", "topic-label", paper.topic));
         meta.appendChild(element("span", "", paper.venue + " · " + paper.year));
-        if (paper.citations !== null) { meta.appendChild(element("span", "", paper.citations + (paper.citations === 1 ? " citation" : " citations"))); }
+        if (paper.citations) { meta.appendChild(element("span", "", paper.citations + (paper.citations === 1 ? " citation" : " citations"))); }
         if (paper.essential) { meta.appendChild(element("span", "essential-badge", "Essential")); }
         card.appendChild(meta);
         card.appendChild(paperLink(paper, "h2"));

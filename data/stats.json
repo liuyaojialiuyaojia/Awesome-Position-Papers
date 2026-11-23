@@ -124,7 +124,6 @@
   },
   "with_arxiv_id": 401,
   "charts": [
-    "assets/papers_per_topic.png",
     "assets/papers_per_topic_by_year.png"
   ]
 }

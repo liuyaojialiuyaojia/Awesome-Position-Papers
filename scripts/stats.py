@@ -36,24 +36,6 @@ def _figure_setup(fig, ax) -> None:
     ax.tick_params(colors=SOFT, length=0)
 
 
-def chart_topic(df: pd.DataFrame, out: str) -> None:
-    counts = df["topic"].value_counts(ascending=True)
-    fig, ax = plt.subplots(figsize=(7.4, 0.44 * len(counts) + 1.5), dpi=170)
-    _figure_setup(fig, ax)
-    bars = ax.barh(counts.index, counts.values, color=BLUE, height=0.62)
-    ax.set_xlim(0, counts.max() * 1.14)
-    ax.grid(axis="x", color=GRID, linewidth=0.8)
-    ax.set_axisbelow(True)
-    for b, v in zip(bars, counts.values):
-        ax.text(v + counts.max() * 0.012, b.get_y() + b.get_height() / 2, str(v),
-                va="center", ha="left", fontsize=8.5, color=SOFT)
-    ax.set_xlabel("papers", fontsize=9, color=SOFT)
-    ax.set_title("Position papers per topic", loc="left", fontsize=12, color=INK, pad=12)
-    fig.tight_layout()
-    fig.savefig(out, facecolor=BG)
-    plt.close(fig)
-
-
 def _matrix(ax, labels: list[str], cols: list[str], values: np.ndarray,
             colname: str) -> float:
     """Draw one annotated count matrix; returns the axis width used for labels."""
@@ -83,6 +65,15 @@ def chart_topic_year(df: pd.DataFrame, out: str) -> None:
     frame["year"] = pd.to_numeric(frame["year"], errors="coerce")
     frame = frame.dropna(subset=["year"])
     frame["year"] = frame["year"].astype(int)
+    # Years with only a handful of papers would be an almost empty column:
+    # fold them into the next year and label the column as a range.
+    per_year = frame["year"].value_counts().sort_index()
+    first = min(y for y, n in per_year.items() if n >= 10)
+    early = frame["year"] < first
+    label = {y: str(y) for y in per_year.index}
+    if early.any():
+        label[first] = f"{int(frame['year'].min())}–{str(first)[-2:]}"
+        frame.loc[early, "year"] = first
 
     order = list(df["topic"].value_counts().index)
     years = sorted(frame["year"].unique())
@@ -92,7 +83,7 @@ def chart_topic_year(df: pd.DataFrame, out: str) -> None:
 
     fig, ax = plt.subplots(figsize=(7.4, 0.44 * len(order) + 1.8), dpi=170)
     _figure_setup(fig, ax)
-    _matrix(ax, order, [str(y) for y in years], values, "year")
+    _matrix(ax, order, [label[y] for y in years], values, "year")
     ax.set_title("Position papers per topic, by year", loc="left",
                  fontsize=12, color=INK, pad=12)
     fig.tight_layout()
@@ -111,7 +102,6 @@ def main() -> None:
     df["year"] = pd.to_numeric(df["year"], errors="coerce")
 
     os.makedirs(C.ASSETS, exist_ok=True)
-    chart_topic(df, os.path.join(C.ASSETS, "papers_per_topic.png"))
     chart_topic_year(df, os.path.join(C.ASSETS, "papers_per_topic_by_year.png"))
 
     def counts(col: str) -> dict:
@@ -147,7 +137,7 @@ def main() -> None:
         "per_venue_year": venue_year,
         "per_track_year": track_year,
         "with_arxiv_id": int((df["arxiv_id"].astype(str).str.len() > 0).sum()),
-        "charts": ["assets/papers_per_topic.png", "assets/papers_per_topic_by_year.png"],
+        "charts": ["assets/papers_per_topic_by_year.png"],
     }
     C.write_json(stats, os.path.join(C.DATA, "stats.json"))
     print(f"stats: {stats['papers']} papers, {stats['topics']} topics, "

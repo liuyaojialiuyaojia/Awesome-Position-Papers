@@ -158,18 +158,7 @@ title.
 From the repo root, with a fresh venv:
 
 ```bash
-python -m venv .venv
-.venv/bin/pip install -r requirements.txt
-
-.venv/bin/python scripts/collect_icml.py --year 2024
-.venv/bin/python scripts/collect_icml.py --year 2025
-.venv/bin/python scripts/collect_neurips.py
-.venv/bin/python scripts/collect_arxiv.py
-.venv/bin/python scripts/build_dataset.py
-.venv/bin/python scripts/fetch_citations.py   # OpenAlex; cached; no key required
-.venv/bin/python scripts/stats.py
-.venv/bin/python scripts/build_readme.py
-.venv/bin/python scripts/build_site.py
+bash scripts/update_all.sh   # creates .venv if needed, then runs every step in order
 ```
 
 Second runs are near-instant because every raw API response is cached under
