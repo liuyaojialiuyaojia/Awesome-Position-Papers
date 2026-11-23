@@ -42,6 +42,25 @@ VENUE_MENTION = re.compile(
 POSITION_MENTION = re.compile(r"position\s*(?:paper)?\s*track|position\s*paper", re.I)
 WORKSHOP = re.compile(r"workshop|tutorial|consortium", re.I)
 CURATED = os.path.join(C.DATA, "curated", "stances.jsonl")
+FILTER = os.path.join(C.DATA, "curated", "filter.jsonl")
+
+
+def load_exclusions() -> dict[str, dict]:
+    if not os.path.exists(FILTER):
+        return {}
+    exclusions = {}
+    with open(FILTER, encoding="utf-8") as fh:
+        for line_number, line in enumerate(fh, 1):
+            if not line.strip():
+                continue
+            record = json.loads(line)
+            paper_id = record.get("id", "")
+            if not paper_id or paper_id in exclusions:
+                raise ValueError(f"missing or duplicate exclusion id at line {line_number}: {paper_id!r}")
+            if record.get("exclude") is not True or not record.get("reason", "").strip():
+                raise ValueError(f"invalid exclusion at line {line_number}")
+            exclusions[paper_id] = record
+    return exclusions
 
 
 def load_curated() -> dict[str, dict]:
@@ -210,6 +229,26 @@ def merge() -> tuple[list[dict], dict]:
             row["topic"] = record["topic"].strip()
             stats["curated"] += 1
 
+    exclusions = load_exclusions()
+    unknown = set(exclusions) - row_ids
+    if unknown:
+        raise ValueError(f"excluded ids not present in the dataset: {sorted(unknown)}")
+    by_row_id = {row["id"]: row for row in rows}
+    for paper_id, record in exclusions.items():
+        duplicate_of = record.get("duplicate_of")
+        if duplicate_of and duplicate_of not in row_ids:
+            raise ValueError(f"duplicate target not present for {paper_id}: {duplicate_of}")
+        if duplicate_of in exclusions:
+            raise ValueError(f"duplicate target is also excluded for {paper_id}: {duplicate_of}")
+    for row in rows:
+        record = exclusions.get(row["id"])
+        row["excluded"] = "true" if record else "false"
+        if record and record.get("duplicate_of"):
+            keeper = by_row_id[record["duplicate_of"]]
+            if row.get("arxiv_id") and not keeper.get("arxiv_id"):
+                keeper["arxiv_id"] = row["arxiv_id"]
+    stats["excluded"] = len(exclusions)
+
     rows.sort(key=lambda r: (-r["year"], r["venue"], r["title"].lower()))
     return rows, stats
 
@@ -223,7 +262,7 @@ def main() -> None:
     C.write_csv(rows, args.out)
     print(f"  wrote {len(rows)} rows -> {os.path.relpath(args.out, C.REPO)}")
     print(f"    curated stance/topic overrides: {stats['curated']}; automatic drafts retained: "
-          f"{len(rows) - stats['curated']}")
+          f"{len(rows) - stats['curated']}; excluded from public views: {stats['excluded']}")
     for src, n in stats["sources"].items():
         print(f"    {n:4d}  {src}")
     print(f"    duplicates dropped: {stats['dups_dropped']} by title, "

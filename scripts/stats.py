@@ -118,6 +118,8 @@ def main() -> None:
     args = ap.parse_args()
 
     df = pd.read_csv(args.csv, keep_default_na=False)
+    if "excluded" in df:
+        df = df[df["excluded"].astype(str).str.lower() != "true"].copy()
     df["year"] = pd.to_numeric(df["year"], errors="coerce")
 
     os.makedirs(C.ASSETS, exist_ok=True)

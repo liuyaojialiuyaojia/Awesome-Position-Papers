@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23 — Filter candidates
+
+- Added `scripts/filter_candidates.py` and `data/filter_candidates.jsonl`; heuristic checks flagged 24 of 647 rows: 14 near-duplicates, 9 weak position signals, and 1 withdrawal mention.
+- Manually reviewed only the flagged rows. Excluded 9: seven duplicate arXiv/ICML variants and two method papers (`2405.18236`, `2502.03876`). The withdrawal mention concerned a dataset, not the paper; no rows were cut for withdrawal or short abstracts.
+- Added `data/curated/filter.jsonl` and the CSV `excluded` column. All 647 rows remain in the CSV; stats, charts, and both READMEs now include 638 papers. Official conference rows retained from duplicate pairs inherit their arXiv ids.
+- Known problems: candidate rules are heuristic and do not prove scope or duplication; unflagged rows were not re-audited. The website does not exist yet, so there was no site output to filter.
+
 ## 2026-11-23 — Task v3: model-written stances and topics
 
 - Read all 647 titles and abstracts; added 647 curated rows in `data/curated/stances.jsonl` across 26 resumable batches.

@@ -254,7 +254,8 @@ between requests, exponential back-off on `429`, raw responses cached under
 | `scripts/collect_neurips.py --year 2025\\|2026` | NeurIPS position track: the track page joined to the virtual-site export; 2026 unions the three locale sites |
 | `scripts/collect_arxiv.py` | arXiv titles starting with `Position:` / `Position Paper:` (Jan 2023 → today) |
 | `scripts/link_arxiv.py` | resolves arXiv ids for venue papers the title scan missed |
-| `scripts/build_dataset.py` | merge + dedupe + curated stance/topic overrides → `data/papers.csv` |
+| `scripts/build_dataset.py` | merge + dedupe + curated stance/topic overrides + confirmed exclusions → `data/papers.csv` |
+| `scripts/filter_candidates.py` | flags possible duplicates, withdrawals, short abstracts, and non-position papers for review |
 | `scripts/tag_topics.py` | automatic topic and stance fallbacks for papers without curated rows |
 | `scripts/stats.py` | `data/stats.json` and the two charts |
 | `scripts/stance_report.py` | stance-quality counts and before/after pairs for `REPORT.md` |
@@ -394,7 +395,7 @@ def main() -> None:
     ap.add_argument("--stats", default=os.path.join(C.DATA, "stats.json"))
     args = ap.parse_args()
 
-    rows = C.read_csv(args.csv)
+    rows = [r for r in C.read_csv(args.csv) if r.get("excluded", "").lower() != "true"]
     with open(args.stats, encoding="utf-8") as fh:
         stats = json.load(fh)
     tax = tag_topics.load_taxonomy()

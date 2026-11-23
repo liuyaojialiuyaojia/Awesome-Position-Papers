@@ -25,12 +25,18 @@ the collector so the next full run also produces it.
 | `topic`, `stance_summary` | curated draft from `data/curated/stances.jsonl`; automatic fallback for new papers — see below |
 | `citations` | usually empty: Semantic Scholar is rate-limited without a key (see `REPORT.md`) |
 | `source` | which collector produced the row; do not hand it off |
+| `excluded` | `true` for reviewed rows hidden from public views; otherwise `false` |
 
 Deduplication runs twice: on the normalised title
 (`scripts/common.py:norm_title`) and, after the arXiv ids are joined, on the id
 itself — a track's camera-ready title is often not the title the paper was
 uploaded to arXiv under, and the id is what proves they are one paper. The
 track row wins, because it carries the venue metadata.
+
+To review possible duplicates, withdrawals, short abstracts, or out-of-scope arXiv
+rows, run `.venv/bin/python scripts/filter_candidates.py`. Review only the flagged
+rows in `data/filter_candidates.jsonl`; record confirmed exclusions with a reason
+in `data/curated/filter.jsonl`, then rebuild. Excluded rows stay in the CSV.
 
 ## Fixing topics and stance summaries
 

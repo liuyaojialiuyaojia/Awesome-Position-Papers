@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-23",
-  "papers": 647,
+  "papers": 638,
   "topics": 15,
   "years": {
     "min": 2023,
@@ -8,38 +8,38 @@
   },
   "per_topic": {
     "Evaluation & benchmarks": 87,
-    "Foundations & theory": 74,
+    "Foundations & theory": 71,
     "Safety & alignment": 62,
-    "Agents & autonomy": 55,
+    "Agents & autonomy": 54,
     "Data, provenance & ownership": 53,
     "Governance, regulation & policy": 47,
-    "Human-AI interaction & usability": 46,
+    "Human-AI interaction & usability": 45,
     "Open science, publishing & research culture": 44,
     "Scientific discovery & AI for science": 42,
-    "Language models & reasoning": 37,
-    "Multimodal, vision & generative media": 26,
-    "Efficiency, scaling & sustainability": 25,
+    "Language models & reasoning": 36,
+    "Multimodal, vision & generative media": 25,
+    "Efficiency, scaling & sustainability": 24,
     "Fairness, bias & pluralism": 24,
     "Society, labor & economy": 19,
-    "Other & cross-cutting": 6
+    "Other & cross-cutting": 5
   },
   "per_venue": {
-    "ICML": 369,
+    "ICML": 365,
     "NeurIPS": 181,
-    "arXiv-only": 94,
+    "arXiv-only": 89,
     "ACL": 2,
     "EMNLP": 1
   },
   "per_year": {
     "2023": 1,
-    "2024": 85,
-    "2025": 157,
-    "2026": 404
+    "2024": 84,
+    "2025": 156,
+    "2026": 397
   },
   "per_source": {
     "icml2026_position_track": 213,
     "neurips2026_position_track": 137,
-    "arxiv_title_scan": 110,
+    "arxiv_title_scan": 101,
     "icml2024_position_track": 75,
     "icml2025_position_track": 72,
     "neurips2025_position_track": 40
@@ -48,7 +48,7 @@
     "Agents & autonomy": {
       "2024": 7,
       "2025": 13,
-      "2026": 35
+      "2026": 34
     },
     "Data, provenance & ownership": {
       "2024": 10,
@@ -58,7 +58,7 @@
     "Efficiency, scaling & sustainability": {
       "2024": 1,
       "2025": 4,
-      "2026": 20
+      "2026": 19
     },
     "Evaluation & benchmarks": {
       "2024": 7,
@@ -74,7 +74,7 @@
       "2023": 1,
       "2024": 15,
       "2025": 14,
-      "2026": 44
+      "2026": 41
     },
     "Governance, regulation & policy": {
       "2024": 9,
@@ -84,16 +84,16 @@
     "Human-AI interaction & usability": {
       "2024": 2,
       "2025": 16,
-      "2026": 28
+      "2026": 27
     },
     "Language models & reasoning": {
       "2024": 5,
       "2025": 7,
-      "2026": 25
+      "2026": 24
     },
     "Multimodal, vision & generative media": {
       "2024": 6,
-      "2025": 6,
+      "2025": 5,
       "2026": 14
     },
     "Open science, publishing & research culture": {
@@ -102,7 +102,6 @@
       "2026": 30
     },
     "Other & cross-cutting": {
-      "2024": 1,
       "2025": 3,
       "2026": 2
     },
@@ -132,7 +131,7 @@
     "ICML": {
       "2024": 75,
       "2025": 72,
-      "2026": 222
+      "2026": 218
     },
     "NeurIPS": {
       "2025": 43,
@@ -140,19 +139,19 @@
     },
     "arXiv-only": {
       "2023": 1,
-      "2024": 10,
-      "2025": 41,
-      "2026": 42
+      "2024": 9,
+      "2025": 40,
+      "2026": 39
     }
   },
   "per_track_year": {
     "Position Paper Track": {
       "2024": 75,
       "2025": 112,
-      "2026": 356
+      "2026": 354
     }
   },
-  "with_arxiv_id": 403,
+  "with_arxiv_id": 401,
   "charts": [
     "assets/papers_per_topic.png",
     "assets/papers_per_topic_by_year_venue.png"

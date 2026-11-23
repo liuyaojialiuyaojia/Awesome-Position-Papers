@@ -1,0 +1,9 @@
+{"id":"2602.16864","exclude":true,"reason":"Duplicate variant of the ICML 2026 paper; identical authors and abstract.","duplicate_of":"x9c47806996ee"}
+{"id":"2605.12966","exclude":true,"reason":"Duplicate variant of the ICML 2026 paper; identical authors and revised title/abstract.","duplicate_of":"x1162facb8e5b"}
+{"id":"2606.13704","exclude":true,"reason":"Duplicate variant of the ICML 2026 paper; identical authors and nearly identical abstract.","duplicate_of":"x4b7f6c43d365"}
+{"id":"2606.06533","exclude":true,"reason":"Duplicate variant of the ICML 2026 paper; identical authors and the same training-dynamics argument.","duplicate_of":"x6d1051399135"}
+{"id":"2608.05188","exclude":true,"reason":"Duplicate variant of the ICML 2026 paper; identical authors and nearly identical abstract.","duplicate_of":"xa0ed30e67aa8"}
+{"id":"2605.19514","exclude":true,"reason":"Duplicate variant of the ICML 2026 paper; identical authors and the same Turing-completeness argument.","duplicate_of":"xfb45ccf2ee4f"}
+{"id":"2608.12372","exclude":true,"reason":"Duplicate variant of the ICML 2026 paper; identical authors and nearly identical abstract.","duplicate_of":"x932d57d6e940"}
+{"id":"2405.18236","exclude":true,"reason":"Method paper presenting a phishing detector and empirical results, not a position argument."}
+{"id":"2502.03876","exclude":true,"reason":"Method paper defining anomaly-detection frameworks and reporting experiments, not a position argument."}

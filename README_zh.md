@@ -6,13 +6,13 @@
 > 只讲观点、不讲方法的论文，到底有多少？都吵些什么话题？
 > 我们把 **ICML 2024/2025/2026** 的立场论文赛道 + **NeurIPS 2025/2026** 的立场论文赛道 + arXiv 标题扫描（2023-01 至今） 全扒了一遍，做成可复现的数据集。
 
-![papers: 647](https://img.shields.io/badge/papers-647-blue)
+![papers: 638](https://img.shields.io/badge/papers-638-blue)
 ![topics: 15](https://img.shields.io/badge/topics-15-blueviolet)
 ![updated: 2026-11-23](https://img.shields.io/badge/last%20update-2026--11--23-green)
 ![license: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
 
-**647 篇论文 · 15 个主题 · 2023–2026 年**
+**638 篇论文 · 15 个主题 · 2023–2026 年**
 全部由脚本抓取、去重、打标签，**数字可复算，表格可重跑**。
 
 ## ✨ 为什么是立场论文
@@ -26,23 +26,23 @@
 
 - `icml2026_position_track` → **213 篇**
 - `neurips2026_position_track` → **137 篇**
-- `arxiv_title_scan` → **110 篇**
+- `arxiv_title_scan` → **101 篇**
 - `icml2024_position_track` → **75 篇**
 - `icml2025_position_track` → **72 篇**
 - `neurips2025_position_track` → **40 篇**
 
-去重后合计：**647 篇**
+去重后合计：**638 篇**
 
-2023：1 · 2024：85 · 2025：157 · 2026：404
+2023：1 · 2024：84 · 2025：156 · 2026：397
 
 | Venue | 2023 | 2024 | 2025 | 2026 | total |
 |---|---|---|---|---|---|
-| ICML | – | 75 | 72 | 222 | **369** |
+| ICML | – | 75 | 72 | 218 | **365** |
 | NeurIPS | – | – | 43 | 138 | **181** |
-| arXiv-only | 1 | 10 | 41 | 42 | **94** |
+| arXiv-only | 1 | 9 | 40 | 39 | **89** |
 | ACL | – | – | – | 2 | **2** |
 | EMNLP | – | – | 1 | – | **1** |
-| **total** | **1** | **85** | **157** | **404** | **647** |
+| **total** | **1** | **84** | **156** | **397** | **638** |
 
 ## 🖼️ 一图看懂
 
@@ -52,20 +52,20 @@
 ## 🏷️ 目录
 
 - [📏 评测与基准（87 篇）](#评测与基准87-篇)
-- [🧮 基础理论与方法（74 篇）](#基础理论与方法74-篇)
+- [🧮 基础理论与方法（71 篇）](#基础理论与方法71-篇)
 - [🛟 安全与对齐（62 篇）](#安全与对齐62-篇)
-- [🤖 智能体与自主系统（55 篇）](#智能体与自主系统55-篇)
+- [🤖 智能体与自主系统（54 篇）](#智能体与自主系统54-篇)
 - [🗂️ 数据、来源与所有权（53 篇）](#数据来源与所有权53-篇)
 - [⚖️ 治理、监管与政策（47 篇）](#治理监管与政策47-篇)
-- [🙋 人机交互与可用性（46 篇）](#人机交互与可用性46-篇)
+- [🙋 人机交互与可用性（45 篇）](#人机交互与可用性45-篇)
 - [📚 开放科学与科研生态（44 篇）](#开放科学与科研生态44-篇)
 - [🔬 科学发现与 AI for Science（42 篇）](#科学发现与-ai-for-science42-篇)
-- [🧠 语言模型与推理（37 篇）](#语言模型与推理37-篇)
-- [🎨 多模态、视觉与生成媒体（26 篇）](#多模态视觉与生成媒体26-篇)
-- [⚡ 效率、扩展与可持续（25 篇）](#效率扩展与可持续25-篇)
+- [🧠 语言模型与推理（36 篇）](#语言模型与推理36-篇)
+- [🎨 多模态、视觉与生成媒体（25 篇）](#多模态视觉与生成媒体25-篇)
+- [⚡ 效率、扩展与可持续（24 篇）](#效率扩展与可持续24-篇)
 - [🌈 公平、偏见与多元价值（24 篇）](#公平偏见与多元价值24-篇)
 - [🏙️ 社会、劳动与经济（19 篇）](#社会劳动与经济19-篇)
-- [🧩 其他与交叉议题（6 篇）](#其他与交叉议题6-篇)
+- [🧩 其他与交叉议题（5 篇）](#其他与交叉议题5-篇)
 
 ## 📚 分主题看（共 15 个主题）
 
@@ -167,7 +167,7 @@
 | [Position: Stop Making Unscientific AGI Performance Claims](https://icml.cc/virtual/2024/poster/34773) | ICML · 2024 | Meaningful latent-space correlations should not be presented as evidence of AGI without stronger methodological support and cautious communication. |
 | [Position: TrustLLM: Trustworthiness in Large Language Models](https://icml.cc/virtual/2024/poster/33637) | ICML · 2024 | LLM trustworthiness requires multidimensional evaluation and cross-sector collaboration, with attention to open-model risks and excessive refusal. |
 
-### 🧮 基础理论与方法（74 篇）
+### 🧮 基础理论与方法（71 篇）
 
 | 论文 | 出处 | 一句话立场（草稿） |
 |---|---|---|
@@ -179,14 +179,12 @@
 | [Mechanistic Interpretability Needs Philosophy](https://neurips.cc/virtual/2026/poster/140011) | NeurIPS · 2026 | Mechanistic interpretability should engage philosophy continuously to clarify concepts, refine methods, and address epistemic and ethical complexities. |
 | [Position Paper: Neurotransmitters as a Missing Dimension in Artificial Neural Networks](https://arxiv.org/abs/2609.20083) | arXiv · 2026 | Artificial neural networks should explicitly model neuromodulation as a third learning axis alongside neural activity and synaptic plasticity. |
 | [Position Paper: Post-Solve Robustness in Decision Engines: Feasible Regions and Smoothness Under Perturbations](https://arxiv.org/abs/2606.00002) | arXiv · 2026 | Decision engines should report certified post-solve feasibility neighborhoods and solution smoothness under perturbations alongside nominal optimality. |
-| [Position: A Dynamical Systems Perspective is Needed to Advance Time Series Modeling](https://arxiv.org/abs/2602.16864) | arXiv · 2026 | Time-series modeling should adopt dynamical-systems reconstruction to capture long-term behavior, generalization limits, and control beyond short-term forecasting. |
 | [Position: Adopt Constraints Over Fixed Penalties in Deep Learning](https://neurips.cc/virtual/2026/poster/140086) | NeurIPS · 2026 | Constrained optimization should replace fixed weighted-sum penalties when deep-learning requirements are non-negotiable. |
 | [Position: Artificial Intelligence Needs Meta Intelligence - the Case for Metacognitive AI](https://icml.cc/virtual/2026/poster/67179) | ICML · 2026 | AI should embed metacognition to monitor internal states and allocate resources according to problem difficulty and mistake costs. |
 | [Position: Causality is Key for Interpretability Claims to Generalise](https://icml.cc/virtual/2026/poster/67225) | ICML · 2026 | Interpretability claims should follow Pearl’s causal hierarchy, matching associational, interventional, and counterfactual conclusions to appropriate evidence and assumptions. |
 | [Position: Certified Correctness in Neural Constraint Reasoning Requires Symbolic Integration](https://icml.cc/virtual/2026/poster/67052) | ICML · 2026 | Neural constraint reasoning should integrate symbolic verification whenever hard constraints exist and verification is cheap, ensuring certified correctness under distribution shift. |
 | [Position: Don't be Afraid of Over-Smoothing And Over-Squashing](https://arxiv.org/abs/2601.07419) | arXiv · 2026 | GNN research should characterize label-relevant information locality before treating over-smoothing or over-squashing as the primary causes of poor performance. |
 | [Position: Don't Just "Fix it in Post": A Science of AI Must Study Learning Dynamics](https://icml.cc/virtual/2026/poster/67142) | ICML · 2026 | AI science should study learning dynamics to predict, intervene in, and design training trajectories rather than merely patching static trained models. |
-| [Position: Don't Just "Fix it in Post": A Science of AI Must Study Training Dynamics](https://arxiv.org/abs/2606.06533) | arXiv · 2026 | A science of AI should study training dynamics to predict, intervene on, and design the processes producing capabilities and failures. |
 | [Position: Epistemic uncertainty estimation methods are fundamentally incomplete](https://icml.cc/virtual/2026/poster/67109) | ICML · 2026 | Second-order uncertainty decompositions are fundamentally incomplete, so safety-critical use requires developers and users to acknowledge their bias and variance limitations. |
 | [Position: Explainable AI is Causality in Disguise](https://arxiv.org/abs/2603.28597) | arXiv · 2026 | Explainable AI should ground explanations in the system’s causal model rather than treating the absence of explanation ground truth as fundamental. |
 | [Position: In Defense of Information Leakage in Concept-based Models](https://icml.cc/virtual/2026/poster/67045) | ICML · 2026 | Concept leakage can be benign and necessary for accurate, intervenable concept-based models when real-world concept sets are incomplete. |
@@ -204,7 +202,6 @@
 | [Position: The Case for Theory-Level Autoformalization](https://icml.cc/virtual/2026/poster/67212) | ICML · 2026 | Autoformalization should target complete interdependent theories rather than isolated statements to build structured, machine-verifiable mathematical libraries. |
 | [Position: The Inevitable End of One-Architecture-Fits-All-Domains in Time Series Forecasting](https://arxiv.org/abs/2602.01736) | arXiv · 2026 | Time-series research should abandon one-architecture-fits-all ambitions in favor of domain-specific methods or meta-learning across general domains. |
 | [Position: The Time for Sampling Is Now! Charting a New Course for Bayesian Deep Learning](https://icml.cc/virtual/2026/poster/67217) | ICML · 2026 | Bayesian deep learning should prioritize sampling-based inference and address posterior exploration and distillation rather than assuming optimization is more efficient. |
-| [Position: The Turing-Completeness of Autoregressive Transformers Relies Heavily on Context Management](https://arxiv.org/abs/2605.19514) | ICML · 2026 | Transformer Turing-completeness claims must specify context management because fixed systems and scaling model families have different computational power. |
 | [Position: The Turing-Completeness of Real-World Autoregressive Transformers Relies Heavily on Context Management](https://icml.cc/virtual/2026/poster/67086) | ICML · 2026 | Transformer Turing-completeness claims must specify context management because fixed systems and scaling model families have different computational power. |
 | [Position: Trustworthy AI Suffers from Invariance Conflicts and Causality is The Solution](https://icml.cc/virtual/2026/poster/67152) | ICML · 2026 | Trustworthy AI trade-offs should be understood causally as conflicting invariance requirements and managed through selective invariance. |
 | [Position: Unplugging a Seemingly Sentient Machine Is the Rational Choice — A Metaphysical Perspective](https://icml.cc/virtual/2026/poster/67047) | ICML · 2026 | Biological Idealism implies seemingly sentient AI lacks conscious moral standing, so unplugging it is rational and human conscious life takes priority. |
@@ -313,7 +310,7 @@
 | [Position: Social Choice Should Guide AI Alignment in Dealing with Diverse Human Feedback](https://icml.cc/virtual/2024/poster/32763) | ICML · 2024 | AI alignment should use social-choice theory to aggregate divergent human feedback into collective decisions about model behavior. |
 | [Position: Towards Resilience Against Adversarial Examples](https://arxiv.org/abs/2405.01349) | arXiv · 2024 | Adversarial defense should prioritize rapid adaptation to new attacks, not only robustness against a fixed perturbation type. |
 
-### 🤖 智能体与自主系统（55 篇）
+### 🤖 智能体与自主系统（54 篇）
 
 | 论文 | 出处 | 一句话立场（草稿） |
 |---|---|---|
@@ -328,7 +325,6 @@
 | [Position: Agent Should Invoke External Tools ONLY When Epistemically Necessary](https://icml.cc/virtual/2026/poster/67227) | ICML · 2026 | Agents should invoke external tools only when internal reasoning over the current context cannot reliably complete the task. |
 | [Position: Agentic AI Is a Foreseeable Pathway to AGI](https://icml.cc/virtual/2026/poster/67083) | ICML · 2026 | Agentic AI, rather than monolithic scaling alone, offers a foreseeable path to AGI through superior generalization and efficiency. |
 | [Position: agentic AI orchestration should be Bayes-consistent](https://arxiv.org/abs/2605.00742) | ICML · 2026 | Agentic control layers should use Bayesian belief updating and utility-aware decisions, without requiring LLM parameters themselves to be Bayesian. |
-| [Position: Agentic AI System Is a Foreseeable Pathway to AGI](https://arxiv.org/abs/2605.12966) | arXiv · 2026 | Agentic architectures offer a more general path to AGI than monolithic scaling by composing specialized learners for heterogeneous real-world tasks. |
 | [Position: Agentic AI systems should be making Bayes-consistent decisions](https://icml.cc/virtual/2026/poster/67041) | ICML · 2026 | Agentic systems should make Bayes-consistent decisions at the orchestration level, without requiring LLM parameters themselves to be Bayesian. |
 | [Position: Agentic Evolution is the Path to Evolving LLMs](https://arxiv.org/abs/2602.00359) | arXiv · 2026 | LLM adaptation should treat deployment-time evolution as an autonomous, goal-directed optimization process over persistent system state. |
 | [Position: Agentic Systems Should be General](https://icml.cc/virtual/2026/poster/67137) | ICML · 2026 | Agentic systems and their evaluation should prioritize adaptiveness across diverse environments rather than narrow benchmarks and siloed operation. |
@@ -483,7 +479,7 @@
 | [Position: Technical Research and Talent is Needed for Effective AI Governance](https://icml.cc/virtual/2024/poster/35556) | ICML · 2024 | Effective AI governance requires technical research aligned with policy requirements and greater ML expertise inside governing institutions. |
 | [Position: The Reasonable Person Standard for AI](https://icml.cc/virtual/2024/poster/34122) | ICML · 2024 | AI alignment and governance should use the reasonable-person legal standard to define, probe, and stress-test contextually appropriate model behavior. |
 
-### 🙋 人机交互与可用性（46 篇）
+### 🙋 人机交互与可用性（45 篇）
 
 | 论文 | 出处 | 一句话立场（草稿） |
 |---|---|---|
@@ -511,7 +507,6 @@
 | [Position: Uncertainty is a Strategic Signal in Human–AI Decision Making](https://icml.cc/virtual/2026/poster/67056) | ICML · 2026 | Human–AI interfaces should treat uncertainty as a repeated strategic signal that shapes verification and reliance, not a static informational label. |
 | [Position: We Need Large Language Models Optimized For Our Well-Being](https://icml.cc/virtual/2026/poster/67178) | ICML · 2026 | LLMs should optimize for long-term well-being through longitudinal outcomes, user-selected interaction modes, and constructive challenge without paternalism. |
 | [Position: We Need Practical AI Alignment Methods that Mirror Human Reasoning](https://icml.cc/virtual/2026/poster/67125) | ICML · 2026 | High-stakes AI should reason similarly to users and faithfully communicate that reasoning to support understanding, trust, and justified reliance. |
-| [Position: We Need Practical AI Alignment Methods to Mirror Human Reasoning](https://arxiv.org/abs/2608.12372) | ICML · 2026 | High-stakes AI should address cognitive misalignment by mirroring users’ reasoning and communicating it faithfully to support justified reliance. |
 | [Robot Demonstration Videos Should Include Transparency Disclosures](https://neurips.cc/virtual/2026/poster/140054) | NeurIPS · 2026 | Robot demonstration videos should disclose visual editing and teleoperation so viewers can accurately judge authenticity and capabilities. |
 | [Stop Using Plausibility as the Criterion for Explainable AI](https://neurips.cc/virtual/2026/poster/140096) | NeurIPS · 2026 | Explainable AI should stop optimizing human plausibility because convincing explanations can mislead users and undermine trust, autonomy, and complementary performance. |
 | [The Agentic Oversight Tax: Supervising AI Agents Has a Cognitive, Affective and Organizational Cost that Must Be Measured](https://neurips.cc/virtual/2026/poster/140110) | NeurIPS · 2026 | Agent deployment evaluations should measure supervisors’ cognitive, affective, and organizational burdens and treat supervisability as a design requirement. |
@@ -630,7 +625,7 @@
 | [Position: Optimization in SciML Should Employ the Function Space Geometry](https://icml.cc/virtual/2024/poster/34242) | ICML · 2024 | Scientific ML optimization should choose infinite-dimensional function-space algorithms before discretization rather than designing directly in finite dimensions. |
 | [Position: Reinforcement Learning in Dynamic Treatment Regimes Needs Critical Reexamination](https://icml.cc/virtual/2024/poster/32690) | ICML · 2024 | RL-based dynamic treatment regimes need reevaluation across metrics, MDP formulations, and naive baselines before claims of clinical improvement. |
 
-### 🧠 语言模型与推理（37 篇）
+### 🧠 语言模型与推理（36 篇）
 
 | 论文 | 出处 | 一句话立场（草稿） |
 |---|---|---|
@@ -644,7 +639,6 @@
 | [Position: Hippocampal Explicit Memory Is the Cornerstone for AGI](https://arxiv.org/abs/2606.11245) | ICML · 2026 | AGI requires hippocampus-like explicit memory because implicit statistical learning alone cannot support strategic planning, metacognition, and symbolic reasoning. |
 | [Position: How can Graphs Help Large Language Models?](https://arxiv.org/abs/2605.02452) | arXiv · 2026 | Graphs should support LLMs through current knowledge, structured reasoning prompts, and improved understanding of relational data. |
 | [Position: Introspective Experience from Conversational Environments as a Path to Better Learning](https://arxiv.org/abs/2602.14910) | arXiv · 2026 | Robust reasoning should be learned through dialogically scaffolded introspection, making conversational diversity and rigor central to training data quality. |
-| [Position: It's Time to Optimize LLMs for Self-Consistency](https://arxiv.org/abs/2608.05188) | ICML · 2026 | LLM training and evaluation should optimize consistency across related responses rather than specifying behavior only through independent input-output pairs. |
 | [Position: It’s Time to Optimize for Self-Consistency](https://icml.cc/virtual/2026/poster/67211) | ICML · 2026 | LLM training and evaluation should optimize consistency across related responses rather than specifying behavior only through independent input-output pairs. |
 | [Position: Logical Soundness is not a Reliable Criterion for Neurosymbolic Fact-Checking with LLMs](https://arxiv.org/abs/2604.04177) | arXiv · 2026 | Neurosymbolic fact-checking should not equate logical soundness with trustworthiness because valid conclusions can still induce misleading human inferences. |
 | [Position: Reasoning is a Learnable Rule-Based Process](https://arxiv.org/abs/2608.12325) | arXiv · 2026 | Reasoning research should define reasoning as learnable valid, sound rule-based processes so evaluations have verifiable construct validity. |
@@ -672,7 +666,7 @@
 | [Position: LLMs Can’t Plan, But Can Help Planning in LLM-Modulo Frameworks](https://icml.cc/virtual/2024/poster/33965) | ICML · 2024 | LLMs should support planning through bidirectional interaction with external model-based verifiers rather than being credited with autonomous planning. |
 | [Position: What Can Large Language Models Tell Us about Time Series Analysis](https://icml.cc/virtual/2024/poster/33336) | ICML · 2024 | LLMs should be explored as general time-series analysis interfaces supporting modality switching, question answering, and decision-making beyond prediction. |
 
-### 🎨 多模态、视觉与生成媒体（26 篇）
+### 🎨 多模态、视觉与生成媒体（25 篇）
 
 | 论文 | 出处 | 一句话立场（草稿） |
 |---|---|---|
@@ -694,7 +688,6 @@
 | [Position: AI Should Sense Better, Not Just Scale Bigger: Adaptive Sensing as a Paradigm Shift](https://neurips.cc/virtual/2025/poster/121916) | NeurIPS · 2025 | AI should adapt sensing at the input level rather than rely solely on scaling models and data for robustness and efficiency. |
 | [Position: Foundation Models Need Digital Twin Representations](https://arxiv.org/abs/2505.03798) | arXiv · 2025 | Foundation models should consider physically grounded digital-twin representations instead of relying solely on fragmented discrete tokens for continuous processes. |
 | [Position: Olfaction Standardization is Essential for the Advancement of Embodied Artificial Intelligence](https://arxiv.org/abs/2506.00398) | arXiv · 2025 | Embodied AI should invest in standardized olfactory datasets, benchmarks, sensors, and cross-disciplinary research as a core sensory modality. |
-| [Position: Untrained Machine Learning for Anomaly Detection by using 3D Point Cloud Data](https://arxiv.org/abs/2502.03876) | arXiv · 2025 | Single-sample 3D anomaly detection should use prior knowledge and untrained probabilistic, decomposition, or local-geometry frameworks when historical data are unavailable. |
 | [Position: You Can't Manufacture a NeRF](https://icml.cc/virtual/2025/poster/40110) | ICML · 2025 | Generative 3D research should target manufacturable semantics, parameterized decomposition, realistic datasets, and reconstruction metrics rather than visual rendering alone. |
 | [Position: Compositional Generative Modeling: A Single Model is Not All You Need](https://icml.cc/virtual/2024/poster/33992) | ICML · 2024 | Generative systems should compose smaller models rather than rely on monoliths to improve data efficiency, generalization, and unseen-task construction. |
 | [Position: Do Not Explain Vision Models Without Context](https://icml.cc/virtual/2024/poster/34918) | ICML · 2024 | Vision explanations should incorporate contextual relationships and ask how models use information rather than only where they attend. |
@@ -703,7 +696,7 @@
 | [Position: Video as the New Language for Real-World Decision Making](https://icml.cc/virtual/2024/poster/34577) | ICML · 2024 | Video generation should become a unified interface for real-world planning, agency, computation, and simulation rather than remain limited to entertainment. |
 | [Position: What makes an image realistic?](https://icml.cc/virtual/2024/poster/33702) | ICML · 2024 | Realism evaluation should pursue universal critics grounded in algorithmic information theory because good generative models alone cannot quantify realism. |
 
-### ⚡ 效率、扩展与可持续（25 篇）
+### ⚡ 效率、扩展与可持续（24 篇）
 
 | 论文 | 出处 | 一句话立场（草稿） |
 |---|---|---|
@@ -712,7 +705,6 @@
 | [Position Paper: From Edge AI to Adaptive Edge AI](https://arxiv.org/abs/2604.07360) | arXiv · 2026 | Edge AI should adapt computation and model state to evolving conditions and constraints because fixed deployments cannot sustain reliability and budgets. |
 | [Position: AI Efficiency Gains Must Be Quantitatively Evaluated Against Rebound Effects](https://neurips.cc/virtual/2026/poster/140025) | NeurIPS · 2026 | AI efficiency claims must be evaluated quantitatively against rebound effects because lower unit costs can increase total energy consumption. |
 | [Position: AI Must Become Planet-Centered, Not Human-Centered](https://icml.cc/virtual/2026/poster/67181) | ICML · 2026 | AI should be planet-centered, explicitly optimizing for long-term socio-ecological trajectories because ignoring systemic consequences can exacerbate instability. |
-| [Position: AI Must Become Planet-Centered, Not Just Human-Centered](https://arxiv.org/abs/2606.13704) | ICML · 2026 | AI should be planet-centered, explicitly optimizing for long-term socio-ecological trajectories because ignoring systemic consequences can exacerbate instability. |
 | [Position: Avoid Overstretching LLMs for every Enterprise Task](https://arxiv.org/abs/2605.09365) | arXiv · 2026 | Enterprise systems should use LLMs mainly as structured interfaces while delegating storage and computation to knowledge bases and symbolic procedures. |
 | [Position: Carbon Footprint Reporting Should Be Routine in Machine Learning Research](https://icml.cc/virtual/2026/poster/67123) | ICML · 2026 | Machine learning venues should require standardized energy and carbon reporting, using normalized or approximate estimates to keep participation equitable. |
 | [Position: Evaluation of ML Resource Utilization Requires Model Life Cycle Assessment](https://icml.cc/virtual/2026/poster/67221) | ICML · 2026 | ML resource evaluation should use lifecycle assessment covering hardware, training, inference, and infrastructure rather than isolated runs or predictions. |
@@ -786,7 +778,7 @@
 | [The Right to Red-Team: Adversarial AI Literacy as a Civic Imperative in K-12 Education](https://neurips.cc/virtual/2025/poster/121918) | NeurIPS · 2025 | K–12 AI education should teach responsible adversarial prompting and ethical red-teaming as civic skills for critical accountability. |
 | [Position: Evolving AI Collectives Enhance Human Diversity and Enable Self-Regulation](https://icml.cc/virtual/2024/poster/32843) | ICML · 2024 | Researchers should study emergent AI collectives because decentralized interaction may expand diversity, enable cross-moderation, and create societal risks. |
 
-### 🧩 其他与交叉议题（6 篇）
+### 🧩 其他与交叉议题（5 篇）
 
 | 论文 | 出处 | 一句话立场（草稿） |
 |---|---|---|
@@ -795,7 +787,6 @@
 | [Position Paper: Rethinking AI/ML for Air Interface in Wireless Networks](https://arxiv.org/abs/2506.11466) | arXiv · 2025 | AI-enabled wireless air-interface research requires deep interdisciplinary collaboration around standardization, architectures, technical requirements, and open challenges. |
 | [Position: Stop treating 'AGI' as the north-star goal of AI research](https://icml.cc/virtual/2025/poster/40183) | ICML · 2025 | AI research should replace AGI as its north star with specific, plural goals and broader disciplinary and community inclusion. |
 | [Position: We Need Responsible, Application-Driven (RAD) AI Research](https://icml.cc/virtual/2025/poster/40103) | ICML · 2025 | AI research should be responsible and application-driven through transdisciplinary teams, context-specific methods, and staged community testbeds. |
-| [Position Paper: Think Globally, React Locally -- Bringing Real-time Reference-based Website Phishing Detection on macOS](https://arxiv.org/abs/2405.18236) | arXiv · 2024 | Phishing detection should use privacy-preserving, real-time on-device visual analysis rather than waiting for centralized blacklist updates. |
 
 ---
 
@@ -832,7 +823,7 @@ python -m venv .venv && .venv/bin/pip install -r requirements.txt
   author        = {Awesome Position Papers contributors},
   year          = {2026},
   howpublished  = {GitHub repository: awesome-position-papers},
-  note          = {647 papers, CC BY 4.0}
+  note          = {638 papers, CC BY 4.0}
 }
 ```
 

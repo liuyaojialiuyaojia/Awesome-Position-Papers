@@ -28,7 +28,7 @@ USER_AGENT = "awesome-position-papers/1.0 (research dataset builder; contact via
 
 COLUMNS = [
     "id", "title", "authors", "year", "venue", "track", "arxiv_id", "url",
-    "abstract", "topic", "stance_summary", "citations", "source",
+    "abstract", "topic", "stance_summary", "citations", "source", "excluded",
 ]
 
 

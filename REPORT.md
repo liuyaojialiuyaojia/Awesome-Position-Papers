@@ -4,6 +4,33 @@ This file documents the first full build of the dataset: what was collected,
 how many papers each source produced, which sources failed, known gaps, and
 the exact commands to rerun everything.
 
+## Candidate filtering (2026-11-23)
+
+`scripts/filter_candidates.py` flags candidates without a model and writes `data/filter_candidates.jsonl`; it never excludes a row by itself. Only the 24 flagged rows were reviewed. Confirmed decisions live in `data/curated/filter.jsonl`.
+
+| Candidate reason | Flagged | Excluded | Decision |
+|---|---:|---:|---|
+| Same arXiv id | 0 | 0 | No candidates in the initial dataset. |
+| Near-identical title | 14 | 7 | Seven duplicate pairs confirmed from authors and abstracts; the official ICML row was kept and inherited the arXiv id. |
+| Weak position signal | 9 | 2 | `2405.18236` and `2502.03876` present methods and experiments rather than position arguments. |
+| Withdrawal mention | 1 | 0 | The abstract discusses withdrawal of a training dataset, not withdrawal of the paper. |
+| Empty or very short abstract | 0 | 0 | No abstract was below 400 characters or 60 words. |
+| **Total** | **24** | **9** | 15 candidates were retained. |
+
+The CSV keeps all **647** rows with `excluded=true|false`; stats, charts, and both READMEs contain **638** included papers. Candidate generation remains stable after duplicate rows pass their arXiv ids to the retained conference rows. The website has not been built yet, so no website output existed to filter.
+
+Rerun the filter and public outputs:
+
+```bash
+.venv/bin/python scripts/filter_candidates.py
+# Review only data/filter_candidates.jsonl; update data/curated/filter.jsonl manually.
+.venv/bin/python scripts/build_dataset.py
+.venv/bin/python scripts/stats.py
+.venv/bin/python scripts/build_readme.py
+```
+
+Known limitation: these are candidate heuristics, not exhaustive validation. Unflagged rows were not re-audited.
+
 ## What was done
 
 1. **Collected** position papers from four sources in order of precedence:
