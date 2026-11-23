@@ -1,0 +1,551 @@
+# Topic taxonomy for awesome-position-papers.
+#
+# One PRIMARY topic per paper. scripts/tag_topics.py scores every topic with
+# these keyword lists (title matches count three times more than abstract
+# matches) and, when the venue published its own category, `native` patterns
+# give an extra boost. Nothing here is learned or hand-curated per paper: the
+# taxonomy is the whole rule set, so retagging is deterministic and reviewable
+# by editing this file alone.
+#
+# Topics are listed roughly from specific to broad; ties go to the earlier one.
+#
+# `generic_keywords` are the everywhere-a-LLM-words ("LLM", "language model",
+# "foundation model"). They score only in the title (generic_title_boost) and
+# never from the abstract, because almost every abstract in this corpus mentions
+# them. A topic flagged `catch_all` additionally has to outscore the best
+# specific topic to win, so generic vocabulary cannot quietly swallow a paper
+# that is really about agents, safety, evaluation, society, HCI or fairness.
+
+version: 1
+default_topic: other
+title_boost: 3
+generic_title_boost: 2
+native_boost: 4
+
+topics:
+
+  evaluation-benchmarks:
+    label: "Evaluation & benchmarks"
+    label_zh: "评测与基准"
+    description: "How we measure capabilities: benchmarks, metrics, human studies, reproducible empirical practice."
+    keywords:
+      - benchmark
+      - evaluation
+      - evaluating
+      - eval
+      - metric
+      - leaderboard
+      - dataset of datasets
+      - psychometric
+      - validity
+      - reproducib
+      - replicate
+      - reporting standard
+      - test suite
+      - ground truth
+      - human subject stud
+      - statistics
+      - sample size
+      - power analysis
+    native:
+      - evaluation
+      - benchmark
+      - reproducib
+
+  agents:
+    label: "Agents & autonomy"
+    label_zh: "智能体与自主系统"
+    description: "LLM agents, tool use, multi-agent systems, embodied agents, autonomy and delegation."
+    keywords:
+      - agent
+      - agency
+      - multi-agent
+      - tool use
+      - tool-use
+      - orchestration
+      - autonomy
+      - autonomous system
+      - robotics
+      - robot
+      - embodiment
+      - embodied
+      - world model
+      - planner
+      - planning
+      - planning system
+      - sequential decision making
+      - action model
+      - world action model
+      - agentic
+      - delegation
+      - swarms
+    native:
+      - agent
+      - robotics
+      - embodiment
+
+  safety-alignment:
+    label: "Safety & alignment"
+    label_zh: "安全与对齐"
+    description: "Keeping models and systems harmless and value-aligned: alignment methods, red-teaming, risky capabilities, incident learning."
+    keywords:
+      - safety
+      - unsafe
+      - align
+      - alignment
+      - red team
+      - red-team
+      - jailbreak
+      - oversight
+      - scalable oversight
+      - interpretability
+      - mechanistic
+      - corrigib
+      - deceptive
+      - deception
+      - rlhf
+      - constitutional
+      - guardrail
+      - harmful
+      - hazardous
+      - catastrophic
+      - dual use
+      - misuse
+      - risky capability
+      - existential
+      - ai risk
+      - controlled development
+      - assurance
+    native:
+      - safety
+      - align
+      - trustworth
+
+  governance-policy:
+    label: "Governance, regulation & policy"
+    label_zh: "治理、监管与政策"
+    description: "Law, regulation, standards, institutions and public policy for AI/ML."
+    keywords:
+      - regulation
+      - regulatory
+      - policy
+      - governance
+      - law
+      - legal
+      - liability
+      - compliance
+      - standardisation
+      - standardization
+      - statute
+      - legislature
+      - government
+      - eu ai act
+      - antitrust
+      - competition law
+      - intellectual property
+      - copyright
+      - licensing
+      - sanction
+      - public policy
+      - institution
+      - international
+      - geopolit
+      - weapon
+      - election
+      - democracy
+    native:
+      - policy
+      - regulation
+      - governance
+      - legal
+      - fairne
+
+  science-discovery:
+    label: "Scientific discovery & AI for science"
+    label_zh: "科学发现与 AI for Science"
+    description: "ML as a tool for science: foundation models for molecules, proteins, physics, climate, and the epistemics of that shift."
+    keywords:
+      - scientific discovery
+      - mathematical discovery
+      - ai4math
+      - automated mathematician
+      - theorem proving
+      - science of
+      - for science
+      - ai4science
+      - chemistry
+      - molecular
+      - protein
+      - genomics
+      - biology
+      - biomedical
+      - clinical
+      - medical
+      - health care
+      - drug
+      - physics
+      - climate
+      - weather
+      - astronomy
+      - materials
+      - simulation
+      - laboratory
+      - experiment design
+      - hypothesis generation
+      - physics-informed
+    native:
+      - applications
+      - science
+      - health
+      - neuro
+
+  open-research:
+    label: "Open science, publishing & research culture"
+    label_zh: "开放科学与科研生态"
+    description: "Peer review, citation, open access, code and data release, research incentives, who gets to do ML."
+    keywords:
+      - peer review
+      - reviewing
+      - reviewer
+      - citation
+      - bibliograph
+      - open access
+      - open source
+      - open-sourcing
+      - reproducibility crisis
+      - publish
+      - publication
+      - conference paper
+      - preprint
+      - arxiv
+      - meta-research
+      - scientometric
+      - research incentive
+      - credit
+      - authorship
+      - conference organisation
+      - community norm
+      - negative result
+      - research culture
+      - career
+      - mentor
+      - diversity in research
+      - open science
+      - data sharing polic
+    native:
+      - open science
+      - peer review
+
+  data:
+    label: "Data, provenance & ownership"
+    label_zh: "数据、来源与所有权"
+    description: "Training data: sourcing, consent, licensing, attribution, curation, diversity, leakage, web-scale corpora."
+    keywords:
+      - training data
+      - dataset
+      - data curation
+      - data provenance
+      - consent
+      - attribution
+      - scraping
+      - web-scale
+      - corpus
+      - annotation
+      - labelling
+      - labeling
+      - copyright data
+      - ownership
+      - data rights
+      - privacy
+      - differential privacy
+      - federated learning
+      - memorization
+      - member inference
+      - unlearning
+      - machine unlearning
+      - synthetic data
+      - data contamination
+      - benchmark contaminat
+      - deduplication
+      - creator
+      - compensation
+    native:
+      - privacy
+      - data
+
+  efficiency-scaling:
+    label: "Efficiency, scaling & sustainability"
+    label_zh: "效率、扩展与可持续"
+    description: "Compute and energy: scaling laws, environmental cost, hardware, inference budget, who can afford to train."
+    keywords:
+      - scaling law
+      - scale up
+      - compute cost
+      - compute budget
+      - efficiency
+      - energy
+      - electricity
+      - carbon
+      - environmental
+      - sustainab
+      - footprint
+      - gpu
+      - hardware
+      - accelerator
+      - inference cost
+      - quantization
+      - pruning
+      - distillation
+      - throughput
+      - training cost
+      - foundation model size
+      - small model
+      - frugal
+      - sustainability
+    native:
+      - efficiency
+      - scalability
+      - systems
+
+  theory:
+    label: "Foundations & theory"
+    label_zh: "基础理论与方法"
+    description: "Formal guarantees, learnability, complexity, causality, decision theory and the mathematical identity of the field."
+    keywords:
+      - theory
+      - theoretical
+      - theorem
+      - provabl
+      - guarantee
+      - complexity
+      - lower bound
+      - upper bound
+      - sample complexity
+      - learnab
+      - identifiab
+      - causal
+      - causality
+      - inductive bias
+      - generalization bound
+      - no free lunch
+      - kolmogorov
+      - bayesian
+      - decision theory
+      - game theory
+      - social choice
+      - optimization landscape
+      - formal language
+      - computab
+      - undecidab
+      - statistics of learning
+      - algebraic
+      - topology
+      - topological
+    native:
+      - theory
+      - causality
+      - optimization
+      - game
+
+  society-labor:
+    label: "Society, labor & economy"
+    label_zh: "社会、劳动与经济"
+    description: "AI's externalities on people and markets: jobs, inequality, labour, misinformation, adoption and economic power."
+    keywords:
+      - labour
+      - labor
+      - jobs
+      - employment
+      - work
+      - worker
+      - workforce
+      - unemployment
+      - economy
+      - economic
+      - market
+      - inequality
+      - inequality gap
+      - global south
+      - developing countr
+      - digital divide
+      - access gap
+      - misinformation
+      - disinformation
+      - propaganda
+      - polariz
+      - public opinion
+      - adoption
+      - industry concentration
+      - centralization of power
+      - democratiz
+      - livelihood
+      - gross domestic
+      - gdp
+    native:
+      - social
+      - economic
+      - labour
+
+  ethics-fairness:
+    label: "Fairness, bias & pluralism"
+    label_zh: "公平、偏见与多元价值"
+    description: "Discrimination, harms to groups, representation, value pluralism and whose preferences count."
+    keywords:
+      - fairness
+      - fair
+      - bias
+      - biased
+      - discriminat
+      - stereotype
+      - protected class
+      - disparate
+      - racist
+      - sexism
+      - harmful to
+      - marginaliz
+      - underrepresent
+      - bias audit
+      - pluralis
+      - pluralistic
+      - value conflict
+      - cultural
+      - cross-cultural
+      - language diversity
+      - low-resource language
+      - justice
+      - ethics
+      - ethical
+      - moral
+      - human rights
+      - dignity
+      - autonomy of persons
+    native:
+      - fairness
+      - diversity
+      - ethics
+      - inclus
+
+  human-ai-interaction:
+    label: "Human-AI interaction & usability"
+    label_zh: "人机交互与可用性"
+    description: "Interfaces, trust, explainability for people, augmentation vs automation, and the human side of deployment."
+    keywords:
+      - human-computer interaction
+      - human-ai
+      - human ai
+      - user interface
+      - usability
+      - user experience
+      - ux
+      - interact with
+      - explanation
+      - explainab
+      - interpretability for
+      - transparency to users
+      - trust
+      - calibration of trust
+      - mental model
+      - collaboration
+      - copilot
+      - assistive
+      - augmentation
+      - augment
+      - human-centered
+      - human centered
+      - participation
+      - stakeholder
+      - worker experience
+      - prompting by users
+      - overreliance
+      - automation bias
+    native:
+      - human-computer
+      - interpretab
+      - privacy
+
+  multimodal-perception:
+    label: "Multimodal, vision & generative media"
+    label_zh: "多模态、视觉与生成媒体"
+    description: "Images, video, audio, 3D and generative media, including watermarking and synthetic-content detection."
+    keywords:
+      - vision
+      - visual
+      - image
+      - video
+      - camera
+      - multimodal
+      - multi-modal
+      - cross-modal
+      - text-to-image
+      - diffusion model
+      - generative model
+      - synthetic media
+      - deepfake
+      - watermark
+      - photorealistic
+      - graphics
+      - nerf
+      - 3d
+      - speech
+      - audio
+      - music
+      - perception
+      - segmentation
+      - detection model
+    native:
+      - computer vision
+      - generative
+      - speech
+      - vision
+
+  language-modelling:
+    label: "Language models & reasoning"
+    label_zh: "语言模型与推理"
+    description: "LLM behaviour itself: in-context learning, chain-of-thought, reasoning, planning, retrieval, memory, tokenisation."
+    catch_all: true
+    keywords:
+      - in-context
+      - chain of thought
+      - reasoning
+      - inference-time
+      - test-time
+      - token
+      - tokenizer
+      - context window
+      - retrieval
+      - rag
+      - long memory
+      - hallucin
+      - emergent abilit
+      - instruction tuning
+      - prompting
+      - few-shot
+      - pretraining
+      - decoder
+      - embedding space
+      - common sense
+      - world knowledge
+    generic_keywords:
+      - language model
+      - llm
+      - llms
+      - large language
+      - foundation model
+      - foundation models
+      - transformer
+      - natural language processing
+    native:
+      - reasoning
+
+  other:
+    label: "Other & cross-cutting"
+    label_zh: "其他与交叉议题"
+    description: "Positions that argue about the field itself, or span so many areas that no single tag fits."
+    keywords:
+      - position paper
+      - we argue
+      - research agenda
+      - future of machine learning
+      - field
+      - discipline
+    native: []
