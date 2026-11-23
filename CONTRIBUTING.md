@@ -22,7 +22,7 @@ the collector so the next full run also produces it.
 | `title`, `authors`, `abstract` | as published; LaTeX is flattened by `scripts/tag_topics.py:clean_text` |
 | `year`, `venue`, `track` | venue year wins over the arXiv submission year; `venue` is `ICML`, `NeurIPS`, `arXiv-only`, or another venue if the paper's own arXiv comment names one |
 | `url` | arXiv abstract page when an id exists, else the official venue page |
-| `topic`, `stance_summary` | auto-drafted — see below |
+| `topic`, `stance_summary` | curated draft from `data/curated/stances.jsonl`; automatic fallback for new papers — see below |
 | `citations` | usually empty: Semantic Scholar is rate-limited without a key (see `REPORT.md`) |
 | `source` | which collector produced the row; do not hand it off |
 
@@ -34,25 +34,21 @@ track row wins, because it carries the venue metadata.
 
 ## Fixing topics and stance summaries
 
-Both are deterministic drafts, not ground truth:
+The current drafts were written by Kimi-K3.1-Pro (via Qoder CLI) from the
+abstracts. Edit the paper's row in `data/curated/stances.jsonl`:
 
-- `topic` — keyword scores from [`data/taxonomy.yaml`](data/taxonomy.yaml); title
-  hits weigh `title_boost`× an abstract hit, the venue's own category adds
-  `native_boost`×, highest score wins, ties go to the earlier topic in the file.
-  Add a keyword (or move a topic's position) rather than special-casing a paper.
-- `stance_summary` — the paper's own claim sentence, with the framing stripped
-  ("we argue that …", "this position paper contends that …"), else the first
-  normative sentence ("X should …"), else the first judgement sentence
-  ("X remains insufficient …"), else the title clause marked **(from title)**.
-  A candidate with no finite verb is rejected and the next one is tried, so no
-  fragment reaches the README. If it still reads badly, the abstract's own
-  phrasing is worth quoting manually in a PR to `tag_topics.py`; run
-  `scripts/stance_report.py` to see how the whole corpus scores.
+- `stance_summary`: one faithful English claim sentence, at most 30 words, with
+  no framing such as "this paper argues".
+- `topic`: one label from [`data/taxonomy.yaml`](data/taxonomy.yaml); choose the
+  most specific fit.
+- `confidence`: `high`, `medium`, or `low` (use `low` when the abstract is too
+  vague to support a clear claim).
 
-After editing either, rerun:
+New papers without a curated row receive automatic keyword-topic and extractive
+stance drafts. After editing, rerun:
 
 ```bash
-.venv/bin/python scripts/tag_topics.py     # re-tags data/papers.csv in place
+.venv/bin/python scripts/build_dataset.py
 .venv/bin/python scripts/stats.py
 .venv/bin/python scripts/build_readme.py
 ```
@@ -73,5 +69,5 @@ present a method or result. Surveys and opinion blog posts are out. If a paper
 is a methods paper with "position" in the abstract, it is out.
 
 Keep dependencies where they are: `requirements.txt` is pandas + matplotlib, and
-HTTP goes through `urllib` in `scripts/common.py`. No model APIs — the tagging
-must stay auditable as rules in a text file.
+HTTP goes through `urllib` in `scripts/common.py`. Do not call external LLM APIs;
+curated corrections are reviewable text in `data/curated/stances.jsonl`.

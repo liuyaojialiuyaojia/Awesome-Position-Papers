@@ -17,6 +17,7 @@ Two joins happen here:
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -40,6 +41,27 @@ VENUE_MENTION = re.compile(
     r"\s*['\-]?\s*(20\d{2})\b", re.I)
 POSITION_MENTION = re.compile(r"position\s*(?:paper)?\s*track|position\s*paper", re.I)
 WORKSHOP = re.compile(r"workshop|tutorial|consortium", re.I)
+CURATED = os.path.join(C.DATA, "curated", "stances.jsonl")
+
+
+def load_curated() -> dict[str, dict]:
+    if not os.path.exists(CURATED):
+        return {}
+    curated = {}
+    with open(CURATED, encoding="utf-8") as fh:
+        for line_number, line in enumerate(fh, 1):
+            if not line.strip():
+                continue
+            record = json.loads(line)
+            paper_id = record.get("id", "")
+            if not paper_id or paper_id in curated:
+                raise ValueError(f"missing or duplicate curated id at line {line_number}: {paper_id!r}")
+            if record.get("confidence") not in {"high", "medium", "low"}:
+                raise ValueError(f"invalid curated confidence at line {line_number}")
+            if not record.get("stance_summary", "").strip() or not record.get("topic", "").strip():
+                raise ValueError(f"empty curated stance or topic at line {line_number}")
+            curated[paper_id] = record
+    return curated
 
 
 def venue_from_comment(row: dict) -> tuple[str, int, str] | None:
@@ -87,7 +109,8 @@ def merge() -> tuple[list[dict], dict]:
     rows: list[dict] = []
     by_key: dict[str, dict] = {}
     stats = {"sources": {}, "dups_dropped": 0, "arxiv_linked": 0, "arxiv_lookup_found": 0,
-             "arxiv_lookup_missing": 0, "venue_upgraded": 0, "id_dups_dropped": 0}
+             "arxiv_lookup_missing": 0, "venue_upgraded": 0, "id_dups_dropped": 0,
+             "curated": 0}
 
     def add(row: dict) -> None:
         key = C.norm_title(row["title"])
@@ -176,6 +199,17 @@ def merge() -> tuple[list[dict], dict]:
         row["id"] = C.make_id(row["title"], row.get("arxiv_id", ""))
         row["year"] = int(row["year"])
 
+    curated = load_curated()
+    row_ids = {row["id"] for row in rows}
+    unknown = set(curated) - row_ids
+    if unknown:
+        raise ValueError(f"curated ids not present in the dataset: {sorted(unknown)}")
+    for row in rows:
+        if record := curated.get(row["id"]):
+            row["stance_summary"] = record["stance_summary"].strip()
+            row["topic"] = record["topic"].strip()
+            stats["curated"] += 1
+
     rows.sort(key=lambda r: (-r["year"], r["venue"], r["title"].lower()))
     return rows, stats
 
@@ -188,6 +222,8 @@ def main() -> None:
     rows, stats = merge()
     C.write_csv(rows, args.out)
     print(f"  wrote {len(rows)} rows -> {os.path.relpath(args.out, C.REPO)}")
+    print(f"    curated stance/topic overrides: {stats['curated']}; automatic drafts retained: "
+          f"{len(rows) - stats['curated']}")
     for src, n in stats["sources"].items():
         print(f"    {n:4d}  {src}")
     print(f"    duplicates dropped: {stats['dups_dropped']} by title, "

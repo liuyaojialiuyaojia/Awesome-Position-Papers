@@ -123,7 +123,7 @@ def sections_en(placed: list[tuple[str, list[dict]]]) -> tuple[str, str]:
         heading = f"{label} ({len(group)} papers)"
         toc.append(f"- [{heading}](#{gh_anchor(heading)})")
         body.append(f"### {heading}\n")
-        body.append("| Paper | Venue / Year | Stance (auto-drafted) |")
+        body.append("| Paper | Venue / Year | Stance (draft) |")
         body.append("|---|---|---|")
         for r in group:
             body.append(f"| {link(r['title'], paper_url(r))} | {venue_label(r)} "
@@ -139,7 +139,7 @@ def sections_zh(placed: list[tuple[str, list[dict]]], zh_by_label: dict[str, str
         heading = f"{ZH_EMOJI.get(label, '🔹')} {zh}（{len(group)} 篇）"
         toc.append(f"- [{heading}](#{gh_anchor(heading)})")
         body.append(f"### {heading}\n")
-        body.append("| 论文 | 出处 | 一句话立场（自动生成） |")
+        body.append("| 论文 | 出处 | 一句话立场（草稿） |")
         body.append("|---|---|---|")
         for r in group:
             body.append(f"| {link(r['title'], paper_url(r))} | {venue_label(r)} "
@@ -231,14 +231,12 @@ topic and re-collectable with the commands at the bottom.
 
 {charts_md(stats)}
 
-> **`topic` and `stance_summary` are auto-generated drafts.** They come from a
-> deterministic keyword classifier over
-> [`data/taxonomy.yaml`](data/taxonomy.yaml) plus an extractive read of the
-> abstract — no model calls, so they are reproducible but not wise. Each
-> stance is the paper's own claim sentence with its framing ("we argue that…")
-> stripped off; when an abstract states no claim sentence, the title is used
-> instead and the line ends with **(from title)**. Wrong tag or clumsy summary?
-> **PRs welcome**, see [`CONTRIBUTING.md`](CONTRIBUTING.md).
+> **Stance summaries and topics were written by Kimi-K3.1-Pro (via Qoder CLI)**
+> from the abstracts. They are drafts, not ground truth; corrections are welcome
+> by PR — see [`CONTRIBUTING.md`](CONTRIBUTING.md). The curated text lives in
+> [`data/curated/stances.jsonl`](data/curated/stances.jsonl); papers added later
+> without a curated row keep automatic drafts from
+> [`data/taxonomy.yaml`](data/taxonomy.yaml) and the extractive stance fallback.
 
 ## Papers by topic
 
@@ -256,8 +254,8 @@ between requests, exponential back-off on `429`, raw responses cached under
 | `scripts/collect_neurips.py --year 2025\\|2026` | NeurIPS position track: the track page joined to the virtual-site export; 2026 unions the three locale sites |
 | `scripts/collect_arxiv.py` | arXiv titles starting with `Position:` / `Position Paper:` (Jan 2023 → today) |
 | `scripts/link_arxiv.py` | resolves arXiv ids for venue papers the title scan missed |
-| `scripts/build_dataset.py` | merge + dedupe + tag → `data/papers.csv` |
-| `scripts/tag_topics.py` | topic and stance drafts from `data/taxonomy.yaml` |
+| `scripts/build_dataset.py` | merge + dedupe + curated stance/topic overrides → `data/papers.csv` |
+| `scripts/tag_topics.py` | automatic topic and stance fallbacks for papers without curated rows |
 | `scripts/stats.py` | `data/stats.json` and the two charts |
 | `scripts/stance_report.py` | stance-quality counts and before/after pairs for `REPORT.md` |
 | `scripts/build_readme.py` | regenerates `README.md` and `README_zh.md` |
@@ -348,12 +346,11 @@ def build_zh(rows, stats, tax) -> str:
 
 ## 📚 分主题看（共 {stats['topics']} 个主题）
 
-> ⚠️ `主题` 和 `一句话立场` 都是**脚本自动生成的草稿**：主题来自
-> [`data/taxonomy.yaml`](data/taxonomy.yaml) 的关键词规则，立场句是从摘要里
-> 抽出来的原句（把「we argue that…」这类自述框去掉，只留下观点本身），
-> 全程没调用模型。摘要里找不到明确的观点句时，就用标题并标注
-> **(from title)**。标签打错了？**欢迎 PR**。
-> 论文标题与立场保留英文原文（不翻译，避免二次失真）。
+> ⚠️ `主题` 和 `一句话立场` 由 **Kimi-K3.1-Pro（通过 Qoder CLI）** 阅读摘要后撰写，
+> 仍是草稿，不是标准答案；发现不准，**欢迎 PR 修正**，详见
+> [`CONTRIBUTING.md`](CONTRIBUTING.md)。精选文本保存在
+> [`data/curated/stances.jsonl`](data/curated/stances.jsonl)；以后新增但尚未精选的论文，
+> 保留关键词主题与抽取式立场的自动草稿。论文标题与立场保留英文，避免二次失真。
 
 {body}
 ---
@@ -368,8 +365,8 @@ def build_zh(rows, stats, tax) -> str:
 
 ## 🙌 想加论文
 
-- 直接改 `data/papers.csv`，或者加一个 collector
-- 觉得主题分得不准？改 `data/taxonomy.yaml`，再跑 `scripts/tag_topics.py`
+- 缺少论文：加一个 collector，或按贡献指南补数据
+- 主题或立场不准：修改 `data/curated/stances.jsonl` 中对应 ID，再重建
 - 规矩写在 [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 ## 📌 引用
